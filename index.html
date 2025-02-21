@@ -1,59 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Company</title>
+    <title>AuroraMetall</title>
   </head>
   <body>
     <main>
-      <body class="container">
-        <!-- Header -->
-        <header class="header">
+      <body class="container" id="main-container">
+        <!-- Top Gray Header -->
+        <header class="top-header">
           <div class="container">
-            <h1 class="logo">MMK Metall - Videos</h1>
+            <!-- Left Section -->
+            <div class="top-left">
+              <img src="img/phone.png" class="bar-logo" alt="Phone" />
+              <span>+49 123 456 789</span>
+              <img src="img/envelope.png" class="bar-logo" alt="Envelope" />
+              <span>info@mmkmetall.de</span>
+            </div>
+
+            <!-- Right Section -->
+            <div class="top-right">
+              <a href="#" class="social-icon"
+                ><img src="img/facebook.png" class="bar-logo" alt="Facebook"
+              /></a>
+              <a href="#" class="social-icon"
+                ><img src="img/whatsapp.png" class="bar-logo" alt="Whatsapp"
+              /></a>
+              <a href="#" class="social-icon"
+                ><img src="img/youtube.png" class="bar-logo" alt="Youtube"
+              /></a>
+            </div>
           </div>
         </header>
 
-        <!-- Main Content -->
-        <main class="container">
-          <h2 class="section-title">Our Video Gallery</h2>
-          <div class="video-grid">
-            <div class="video-card">
-              <img
-                src="https://via.placeholder.com/300"
-                alt="Video 1"
-                class="video-thumbnail"
-              />
-              <h3 class="video-title">Video 1</h3>
+        <!-- Middle Black Header (Sticky Subnavigation) -->
+        <div class="main-header">
+          <div class="container">
+            <!-- Logo -->
+            <div class="logo-div">
+              <a href="index.html">
+                <img src="img/logo.png" class="logo" alt="AuroraMetall Logo" />
+              </a>
             </div>
-            <div class="video-card">
-              <img
-                src="https://via.placeholder.com/300"
-                alt="Video 2"
-                class="video-thumbnail"
-              />
-              <h3 class="video-title">Video 2</h3>
-            </div>
-            <div class="video-card">
-              <img
-                src="https://via.placeholder.com/300"
-                alt="Video 3"
-                class="video-thumbnail"
-              />
-              <h3 class="video-title">Video 3</h3>
-            </div>
-            <div class="video-card">
-              <img
-                src="https://via.placeholder.com/300"
-                alt="Video 4"
-                class="video-thumbnail"
-              />
-              <h3 class="video-title">Video 4</h3>
-            </div>
+            <nav class="main-nav">
+              <ul>
+                <li id="start" class="nav-el">
+                  <a href="#">Start</a>
+                </li>
+                <li id="about" class="nav-el">
+                  <a href="#">O nas</a>
+                </li>
+                <li id="offer" class="nav-el">
+                  <a href="#">Oferta</a>
+                </li>
+                <li id="templates" class="nav-el">
+                  <a href="#">Wzory ogrodzeń</a>
+                </li>
+                <li id="photogallery" class="nav-el">
+                  <a href="#">Fotogaleria</a>
+                </li>
+                <li id="cases" class="nav-el"><a href="#">Metamorfozy</a></li>
+                <li id="rates" class="nav-el"><a href="#">Recenzje</a></li>
+                <li id="blog" class="nav-el"><a href="#">Blog</a></li>
+                <li id="prices" class="nav-el"><a href="#">Wyceny</a></li>
+                <li id="contact" class="nav-el"><a href="#">Kontakt</a></li>
+              </ul>
+            </nav>
           </div>
+        </div>
+
+        <!-- Scrollable Content -->
+        <main class="content">
+          <h2>Scroll Down</h2>
+          <p>Keep scrolling to test the sticky effect.</p>
+          <div class="scroll-space"></div>
         </main>
 
         <!-- Footer -->
