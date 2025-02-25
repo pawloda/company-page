@@ -1,0 +1,71 @@
+/* About Section */
+.about {
+  display: inline-block;
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(to bottom, #f4f4f9, #7f7f88, black 80%);
+}
+
+.text-content {
+  display: inline-block;
+  font-size: 20px;
+  width: 70%;
+}
+
+.text-content p {
+  text-align: justify;
+}
+
+.image-content img {
+  width: 450px;
+  height: auto;
+}
+
+/* Carousel */
+.carousel-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.carousel-inner img {
+  border-radius: 10px;
+}
+
+/* Offer Section */
+.offer {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.offer ul {
+  list-style: square;
+  padding: 0;
+  text-align: left;
+}
+
+.offer ul li {
+  margin-left: 25%;
+  margin-bottom: 10px;
+  font-size: 24px;
+  padding: 5px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none; /* Remove underline from links */
+  color: #000; /* Black text color */
+}
+
+a:hover {
+  color: #d2691e; /* Change color on hover */
+}

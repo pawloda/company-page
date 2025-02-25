@@ -5,16 +5,13 @@ window.onload = function () {
 };
 
 window.addEventListener("scroll", function () {
-  const header = document.querySelector(".main-header");
   const logo = document.querySelector(".logo");
-  if (window.scrollY > 200) {
+  if (window.scrollY > 100) {
     logo.classList.add("logo-scroll-down");
     logo.classList.remove("logo-scroll-up");
-    header.classList.add("shrink");
   } else {
     logo.classList.add("logo-scroll-up");
     logo.classList.remove("logo-scroll-down");
-    header.classList.remove("shrink");
   }
 });
 

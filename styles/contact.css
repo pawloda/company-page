@@ -12,7 +12,8 @@
 /* Contact Information */
 .contact-info {
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  margin-top: 25px;
 }
 
 .contact-details {
@@ -49,7 +50,7 @@
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  width: 580px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -74,4 +75,8 @@
 /* Scroll Space */
 .scroll-space {
   height: 50px;
+}
+
+#message {
+  resize: none;
 }
