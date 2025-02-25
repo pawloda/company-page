@@ -43,6 +43,7 @@ document.querySelectorAll(".nav-el a").forEach((link) => {
         document.querySelector(".content").innerHTML = data;
       })
       .catch((error) => console.error("Error loading content:", error));
+    scrollToTop();
   }
 });
 
@@ -51,4 +52,11 @@ function addCss(page) {
   link.rel = "stylesheet";
   link.href = `styles/${page}.css`;
   document.head.appendChild(link);
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
