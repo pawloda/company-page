@@ -6,7 +6,7 @@ window.onload = function () {
 
 window.addEventListener("scroll", function () {
   const logo = document.querySelector(".logo");
-  if (window.scrollY > 100) {
+  if (window.scrollY > 50) {
     logo.classList.add("logo-scroll-down");
     logo.classList.remove("logo-scroll-up");
   } else {
@@ -48,6 +48,7 @@ document.querySelectorAll(".nav-el a").forEach((link) => {
 });
 
 function addCss(page) {
+  document.head.removeChild(document.head.lastElementChild);
   const link = document.createElement("link");
   link.rel = "stylesheet";
   link.href = `styles/${page}.css`;
