@@ -2,6 +2,7 @@
 
 window.onload = function () {
   fetchPage(`pages/start.html`);
+  addCss(`pages/start.css`);
 };
 
 window.addEventListener("scroll", function () {
@@ -30,22 +31,22 @@ document.querySelectorAll(".nav-el a").forEach((link) => {
     fetchPage(this.parentElement.id);
     addCss(this.parentElement.id);
   });
-
-  function fetchPage(page) {
-    fetch(`pages/${page}.html`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not OK");
-        }
-        return response.text();
-      })
-      .then((data) => {
-        document.querySelector(".content").innerHTML = data;
-      })
-      .catch((error) => console.error("Error loading content:", error));
-    scrollToTop();
-  }
 });
+
+function fetchPage(page) {
+  fetch(`pages/${page}.html`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not OK");
+      }
+      return response.text();
+    })
+    .then((data) => {
+      document.querySelector(".content").innerHTML = data;
+    })
+    .catch((error) => console.error("Error loading content:", error));
+  scrollToTop();
+}
 
 function addCss(page) {
   document.head.removeChild(document.head.lastElementChild);

@@ -1,0 +1,188 @@
+.hero {
+  background: url("hero.jpg") center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.primary {
+  background: #d2691e;
+  color: white;
+}
+
+.secondary {
+  background: white;
+  color: #d2691e;
+  border: 2px solid #d2691e;
+}
+
+.about,
+.why-us,
+.offer,
+.automation,
+.partners,
+.projects {
+  padding: 40px 20px;
+}
+
+.about {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  display: inline-block;
+}
+
+#image-section {
+  background-image: url("../img/start/start.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin-top: -50px;
+  color: white;
+  opacity: 90%;
+  margin-bottom: 30px;
+}
+
+#first-header {
+  margin-bottom: 20px;
+}
+
+.about p {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.last-doubled div:last-child {
+  grid-column: span 2;
+}
+
+.card,
+.offer-item {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: #af6e4052;
+}
+
+.card img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.offer-item img {
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+}
+
+.offer-item a {
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  border-radius: 8px;
+  padding-bottom: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.offer-item a span {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  display: block;
+  margin-top: -45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  position: absolute;
+}
+
+.offer {
+  margin-top: -70px;
+}
+
+.partners {
+  background-color: white;
+  border-radius: 40px;
+  width: 30%;
+  justify-self: center;
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+
+.partners-logos img {
+  height: 60px;
+  margin: 10px;
+}
+
+.projects img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.automation {
+  margin-top: -30px;
+}
+
+.automation img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.automation h2 {
+  margin-bottom: 10px;
+}
+
+.automation p {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgb(133, 70, 15);
+}
+
+footer {
+  background: #d2691ec6;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin-top: -50px;
+  padding-bottom: 40px;
+}
+
+footer h2 {
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.footer-text {
+  margin-bottom: 10px;
+}
