@@ -1,22 +1,170 @@
-<main class="content">
-  <h2>Scroll Down - Prices</h2>
-  <p>
-    Zapytanie o cenę Wyślij zapytanie o wstępną wycenę do Aurametall Poniżej
-    znajdziesz formularz zapytania ofertowego na ogrodzenia i bramy firmy
-    AuraMetall oraz szkic z instrukcją jak prawidłowo zmierzyć powierzchnię pod
-    ogrodzenie. Jeśli masz jakieś pytania, po prostu daj nam znać. Zdjęcie
-    poglądowe jak mierzyć płot Formularz kontaktowy: Wymiar A: informacje w
-    metrach (długość i wysokość) Wymiar B: informacje w metrach (długość i
-    wysokość) Wymiar C: informacje w metrach (długość i wysokość) Wymiar D:
-    informacje w metrach (długość) Materiał: Wybierz materiał z którego będzie
-    wykonane ogrodzenie: Stal/mata prętowana/Aluminium/Plastik/WPC/Beton/Stal
-    nierdzewna Brama: Brak bramy/jednoskrzydłowa/dwuskrzydłowa/przesuwna/⅔ brama
-    ⅓ furtka Furtka: Tak/Nie Płot: Tak/Nie Automat: czy potrzebujesz od nas
-    automat do bramy? Tak/Nie Słupy: Czy potrzebujesz od nas słupków? Tak/Nie
-    Zdjęcia: Proszę załączyć zdjęcia miejsca gdzie ma się znajdować płot/brama
-    lub zdjęcia płotu którego nie w naszym wzorniku. Miejsce, żeby dodać
-    załączniki zdjęć dodatkowe informacje Imię i Nazwisko Ulica i numer domu Kod
-    pocztowy Miasto Numer telefonu Adres email
+<main class="price-inquiry">
+  <h2 class="title">Zapytanie o cenę</h2>
+  <p class="description">
+    Wypełnij poniższy formularz, aby uzyskać wstępną wycenę ogrodzenia i bram
+    AuraMetall. Jeśli masz pytania, skontaktuj się z nami.
   </p>
-  <div class="scroll-space"></div>
+
+  <form class="inquiry-form">
+    <img src="../img/prices/how-to-measure.png" alt="How to measure" />
+    <fieldset>
+      <legend>Wymiary (w metrach)</legend>
+      <label for="dimension-a">Wymiar A (długość):</label>
+      <input type="text" id="dimension-a" name="dimension-a" required />
+
+      <label for="dimension-b">Wymiar B (długość):</label>
+      <input type="text" id="dimension-b" name="dimension-b" required />
+
+      <label for="dimension-c">Wymiar C (długość):</label>
+      <input type="text" id="dimension-c" name="dimension-c" required />
+
+      <label for="dimension-d">Wymiar D (długość):</label>
+      <input type="text" id="dimension-d" name="dimension-d" required />
+
+      <label for="dimension-h">Wymiar H (wysokość):</label>
+      <input type="text" id="dimension-h" name="dimension-h" required />
+    </fieldset>
+
+    <fieldset>
+      <legend>Rodzaj Materiału</legend>
+      <select id="material" name="material" required>
+        <option value="" disabled selected>Wybierz materiał</option>
+        <option value="stal">Stal</option>
+        <option value="mata">Mata prętowana</option>
+        <option value="aluminium">Aluminium</option>
+        <option value="plastik">Plastik</option>
+        <option value="wpc">WPC</option>
+        <option value="beton">Beton</option>
+        <option value="nierdzewna">Stal nierdzewna</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Opcje dodatkowe</legend>
+      <label>Brama:</label>
+      <select id="brama" name="brama">
+        <option value="none">Brak bramy</option>
+        <option value="jednoskrzydlowa">Jednoskrzydłowa</option>
+        <option value="dwuskrzydlowa">Dwuskrzydłowa</option>
+        <option value="przesuwna">Przesuwna</option>
+        <option value="czesc-brama">⅔ Brama ⅓ Furtka</option>
+      </select>
+
+      <div class="radio-group">
+        <label class="inline-el label-main">Furtka:</label>
+        <input
+          class="inline-el"
+          type="radio"
+          id="furtka-yes"
+          name="furtka"
+          value="tak"
+        />
+        <label class="inline-el" for="furtka-yes">Tak</label>
+        <input
+          class="inline-el"
+          type="radio"
+          id="furtka-no"
+          name="furtka"
+          value="nie"
+          checked
+        />
+        <label class="inline-el" for="furtka-no">Nie</label>
+      </div>
+
+      <div class="radio-group">
+        <label class="inline-el label-main">Płot:</label>
+        <input
+          class="inline-el"
+          type="radio"
+          id="plot-yes"
+          name="plot"
+          value="tak"
+        />
+        <label class="inline-el" for="plot-yes">Tak</label>
+        <input
+          class="inline-el"
+          type="radio"
+          id="plot-no"
+          name="plot"
+          value="nie"
+          checked
+        />
+        <label class="inline-el" for="plot-no">Nie</label>
+      </div>
+
+      <div class="radio-group">
+        <label class="inline-el label-main">Automat do bramy:</label>
+        <input
+          class="inline-el"
+          type="radio"
+          id="automat-yes"
+          name="automat"
+          value="tak"
+        />
+        <label class="inline-el" for="automat-yes">Tak</label>
+        <input
+          class="inline-el"
+          type="radio"
+          id="automat-no"
+          name="automat"
+          value="nie"
+          checked
+        />
+        <label class="inline-el" for="automat-no">Nie</label>
+      </div>
+
+      <div class="radio-group">
+        <label class="inline-el label-main">Słupy:</label>
+        <input
+          class="inline-el"
+          type="radio"
+          id="slupy-yes"
+          name="slupy"
+          value="tak"
+        />
+        <label class="inline-el" for="slupy-yes">Tak</label>
+        <input
+          class="inline-el"
+          type="radio"
+          id="slupy-no"
+          name="slupy"
+          value="nie"
+          checked
+        />
+        <label class="inline-el" for="slupy-no">Nie</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dodatkowe informacje</legend>
+      <label for="images">Zdjęcia (opcjonalnie):</label>
+      <input type="file" id="images" name="images" multiple />
+
+      <label for="message">Dodatkowe informacje:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dane kontaktowe</legend>
+      <label for="name">Imię i Nazwisko:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="address">Ulica i numer domu:</label>
+      <input type="text" id="address" name="address" />
+
+      <label for="zip">Kod pocztowy:</label>
+      <input type="text" id="zip" name="zip" />
+
+      <label for="city">Miasto:</label>
+      <input type="text" id="city" name="city" />
+
+      <label for="phone">Numer telefonu:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="email">Adres email:</label>
+      <input type="email" id="email" name="email" required />
+    </fieldset>
+
+    <button type="submit">Wyślij zapytanie</button>
+  </form>
 </main>
