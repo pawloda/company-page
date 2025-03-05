@@ -17,7 +17,6 @@ ul {
 
 body {
   background-color: #f4f4f9;
-  height: 100vh;
 }
 
 /* Container */
@@ -141,7 +140,6 @@ body {
 
 /* Scrollable Content */
 .content {
-  padding: 50px 0;
   text-align: center;
 }
 

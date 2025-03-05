@@ -1,21 +1,32 @@
 /* About Section */
 .about {
+  margin-top: 20px;
   display: inline-block;
   background-color: transparent;
+  text-align: center;
   padding: 10px;
-  margin-bottom: 10px;
   background: linear-gradient(to bottom, #f4f4f9, #7f7f88, black 80%);
 }
 
 .text-content {
   display: inline-block;
   font-size: 20px;
-  width: 70%;
   text-align: left;
+  background-color: white;
+  margin-left: 100px;
+  border-radius: 10px;
+  border-bottom-left-radius: 200px;
+  border-top-left-radius: 200px;
 }
 
 .text-content p {
-  line-height: 1.6;
+  margin-top: 60px;
+  margin-right: 260px;
+  line-height: 2;
+}
+
+.image-content {
+  background: black;
 }
 
 .image-content img {
@@ -28,11 +39,11 @@
   background: white;
   padding: 30px;
   border-radius: 10px;
+  border-bottom-right-radius: 200px;
+  border-top-right-radius: 200px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-bottom: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 30px 100px 30px 10px;
 }
 
 .offer ul {
@@ -49,14 +60,7 @@
   padding: 5px;
 }
 
-h1 {
-  text-transform: uppercase;
-  font-size: 34px;
-  margin-bottom: 34px;
-  margin-left: 15%;
-}
-
-h2 {
+.offer h2 {
   text-transform: uppercase;
   font-size: 30px;
   margin-top: 20px;
@@ -64,30 +68,28 @@ h2 {
   margin-left: 35%;
 }
 
-a {
+.offer ul li a {
   text-decoration: none;
   color: #000;
 }
 
-a:hover {
+.offer ul li a:hover {
   color: #d2691e;
 }
 
 #fence-picture {
-  width: 220px;
+  width: 300px;
   border-radius: 50%;
   float: right;
   border: 2px solid rgba(184, 115, 6);
-  margin-right: 300px;
-  margin-top: 120px;
+  margin-right: 30px;
+  margin-top: 38px;
 }
 
 #worker-picture {
-  width: 220px;
+  width: 300px;
   border-radius: 50%;
   float: left;
-  margin-right: 50px;
-  margin-top: 5px;
-  margin-bottom: 50px;
+  margin: 30px 150px 30px 30px;
   border: 2px solid rgba(184, 115, 6);
 }
