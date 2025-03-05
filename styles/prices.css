@@ -129,4 +129,7 @@
 
 .inquiry-form button:hover {
   background: #e47541;
+  transform: scale(1.02);
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s;
 }

@@ -9,22 +9,6 @@
   margin-bottom: 20px;
 }
 
-.category-btn {
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  background: #d2691e;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.category-btn:hover {
-  background: #a0522d;
-}
-
 /* Subcategory hidden by default */
 .subcategory {
   margin-top: 20px;

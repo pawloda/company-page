@@ -1,7 +1,7 @@
 .hero {
   background: url("hero.jpg") center/cover no-repeat;
   color: white;
-  padding: 80px 20px;
+  padding: 130px 20px;
 }
 
 .hero .hero-content p {
@@ -53,8 +53,8 @@
 }
 
 .about {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
   display: inline-block;
 }
 
@@ -75,7 +75,8 @@
 
 .about p {
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #f0f0f0c9;
 }
 
 .grid {
@@ -126,15 +127,13 @@
 }
 
 .offer-item a span {
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  display: block;
-  margin-top: -45px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
   position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
+  border-radius: 5px;
 }
 
 .offer {
@@ -208,4 +207,17 @@
 
 .footer-text {
   margin-bottom: 10px;
+}
+
+/* Hover effects */
+.offer img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s;
 }
