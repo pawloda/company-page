@@ -143,11 +143,6 @@ body {
   text-align: center;
 }
 
-.scroll-space {
-  height: 1500px; /* Adds enough space for scrolling */
-  background: linear-gradient(to bottom, white, #f4f4f9);
-}
-
 /* Footer */
 .footer {
   padding: 20px;

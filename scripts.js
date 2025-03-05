@@ -1,8 +1,9 @@
 "use strict";
 
 window.onload = function () {
-  fetchPage(`pages/start.html`);
-  addCss(`pages/start.css`);
+  fetchPage(`start`);
+  addCss(`start`);
+  scrollToTop();
 };
 
 window.addEventListener("scroll", function () {
@@ -28,8 +29,10 @@ document.querySelectorAll(".nav-el").forEach((el) => {
 document.querySelectorAll(".nav-el a").forEach((link) => {
   link.addEventListener("click", function (event) {
     event.preventDefault();
-    fetchPage(this.parentElement.id);
-    addCss(this.parentElement.id);
+    setTimeout(() => {
+      fetchPage(this.parentElement.id);
+      addCss(this.parentElement.id);
+    }, 100);
   });
 });
 
