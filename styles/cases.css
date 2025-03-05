@@ -3,9 +3,10 @@
 }
 
 .cases-content {
-  text-transform: uppercase;
-  font-size: 30px;
   margin-top: 60px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #b25819;
 }
 
 .cases-section p {
@@ -14,7 +15,8 @@
   font-size: 20px;
   margin-left: 30px;
   line-height: 1.6;
-  width: 80%;
-  margin-left: 10%;
+  width: 70%;
+  margin-left: 15%;
   margin-right: auto;
+  font-style: italic;
 }

@@ -12,6 +12,11 @@
 }
 
 /* Contact Information */
+.contact-section h2 {
+  font-weight: 600;
+  color: #b25819;
+}
+
 .contact-info {
   font-size: 18px;
   margin-bottom: 20px;

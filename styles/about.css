@@ -17,12 +17,16 @@
   border-radius: 10px;
   border-bottom-left-radius: 200px;
   border-top-left-radius: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .text-content p {
   margin-top: 60px;
   margin-right: 260px;
   line-height: 2;
+  color: #b25819;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .image-content {
@@ -44,6 +48,7 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin: 30px 100px 30px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .offer ul {
@@ -65,11 +70,13 @@
   font-size: 30px;
   margin-top: 20px;
   margin-bottom: 30px;
-  margin-left: 35%;
+  margin-left: 31%;
+  color: #b25819;
 }
 
 .offer ul li a {
   text-decoration: none;
+  font-weight: 400;
   color: #000;
 }
 
@@ -84,12 +91,14 @@
   border: 2px solid rgba(184, 115, 6);
   margin-right: 30px;
   margin-top: 38px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #worker-picture {
   width: 300px;
   border-radius: 50%;
   float: left;
-  margin: 30px 150px 30px 30px;
+  margin: 30px 120px 30px 30px;
   border: 2px solid rgba(184, 115, 6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
