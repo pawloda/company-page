@@ -15,6 +15,7 @@
 .contact-section h2 {
   font-weight: 600;
   color: #b25819;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info {
