@@ -2,6 +2,7 @@
   background-color: #f5f5f5;
   color: #333;
   margin: 0px 10px;
+  margin-top: 10px;
 }
 
 .offer-section h2 {
@@ -55,12 +56,22 @@
   max-width: 300px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.offer-gallery img:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2-column layout */
+  gap: 20px;
+}
+
+.grid-main {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .fences-grid {
+    grid-template-columns: 1fr; /* Stack items in a single column on small screens */
+  }
 }
 
 /* Responsive */
