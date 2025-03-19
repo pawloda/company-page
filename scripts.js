@@ -16,7 +16,8 @@ const pages = [
 window.onload = function () {
   fetchPages(pages);
   setTimeout(() => {
-    addButtonFunc();
+    addStartButtonFunc();
+    addStartImgFunc();
     showPage("start");
   }, 100);
   scrollToTop();
@@ -114,6 +115,7 @@ function hidePage(page) {
 }
 
 function showPage(page) {
+  scrollToTop();
   const pageContent = document.querySelector(`.${page}-section`);
   if (!pageContent) {
     console.error(`Element .${page}-section not found`);
@@ -132,7 +134,7 @@ function showPage(page) {
   }
 }
 
-function addButtonFunc() {
+function addStartButtonFunc() {
   document
     .querySelector("#start-offer-button")
     .addEventListener("click", function (event) {
@@ -141,7 +143,109 @@ function addButtonFunc() {
         hidePages();
         showPage("prices");
       }, 100);
+
+      document
+        .querySelectorAll(".nav-el")
+        .forEach((item) => item.classList.remove("current"));
+      document.querySelector("#prices").classList.add("current");
     });
+}
+
+function addStartImgFunc() {
+  document.querySelectorAll(".offer-fence").forEach((el) =>
+    el.addEventListener("click", function (event) {
+      event.preventDefault();
+      setTimeout(() => {
+        hidePages();
+        showPage("offer");
+        window.scrollTo({
+          top: 200,
+          behavior: "smooth",
+        });
+      }, 100);
+
+      document
+        .querySelectorAll(".nav-el")
+        .forEach((item) => item.classList.remove("current"));
+      document.querySelector("#offer").classList.add("current");
+    })
+  );
+
+  document.querySelectorAll(".offer-gates").forEach((el) =>
+    el.addEventListener("click", function (event) {
+      event.preventDefault();
+      setTimeout(() => {
+        hidePages();
+        showPage("offer");
+        window.scrollTo({
+          top: 1630,
+          behavior: "smooth",
+        });
+      }, 100);
+
+      document
+        .querySelectorAll(".nav-el")
+        .forEach((item) => item.classList.remove("current"));
+      document.querySelector("#offer").classList.add("current");
+    })
+  );
+
+  document.querySelectorAll(".offer-balustrade").forEach((el) =>
+    el.addEventListener("click", function (event) {
+      event.preventDefault();
+      setTimeout(() => {
+        hidePages();
+        showPage("offer");
+        window.scrollTo({
+          top: 1900,
+          behavior: "smooth",
+        });
+      }, 100);
+
+      document
+        .querySelectorAll(".nav-el")
+        .forEach((item) => item.classList.remove("current"));
+      document.querySelector("#offer").classList.add("current");
+    })
+  );
+
+  document.querySelectorAll(".offer-mesh").forEach((el) =>
+    el.addEventListener("click", function (event) {
+      event.preventDefault();
+      setTimeout(() => {
+        hidePages();
+        showPage("offer");
+        window.scrollTo({
+          top: 1630,
+          behavior: "smooth",
+        });
+      }, 100);
+
+      document
+        .querySelectorAll(".nav-el")
+        .forEach((item) => item.classList.remove("current"));
+      document.querySelector("#offer").classList.add("current");
+    })
+  );
+
+  document.querySelectorAll(".offer-others").forEach((el) =>
+    el.addEventListener("click", function (event) {
+      event.preventDefault();
+      setTimeout(() => {
+        hidePages();
+        showPage("offer");
+        window.scrollTo({
+          top: 1900,
+          behavior: "smooth",
+        });
+      }, 100);
+
+      document
+        .querySelectorAll(".nav-el")
+        .forEach((item) => item.classList.remove("current"));
+      document.querySelector("#offer").classList.add("current");
+    })
+  );
 }
 
 // <!-- Modal Carousel -->
