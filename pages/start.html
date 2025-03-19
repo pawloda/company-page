@@ -55,6 +55,68 @@
           warunki atmosferyczne.
         </p>
       </div>
+
+      <div class="card">
+        <img src="../img/start/logistic.png" alt="Logistic photo" />
+        <p>
+          <strong>Kompleksowa logistyka</strong> – Oferujemy transport
+          zakupionych produktów, dzięki czemu nie musisz martwić się o
+          organizację dostawy.
+        </p>
+      </div>
+      <div class="card">
+        <img src="../img/start/hammer.png" alt="Hammer photo" />
+        <p>
+          <strong>Profesjonalny montaż</strong> – Nasz doświadczony zespół
+          zapewnia szybki i precyzyjny montaż, gwarantując bezpieczeństwo i
+          estetykę końcowego efektu.
+        </p>
+      </div>
+      <div class="card">
+        <img src="../img/start/trust.png" alt="Trust photo" />
+        <p>
+          <strong>Doświadczenie i zaufanie</strong> – Posiadamy wieloletnie
+          doświadczenie w branży, co przekłada się na jakość usług i zadowolenie
+          setek klientów.
+        </p>
+      </div>
+      <div class="card">
+        <img src="../img/start/price.png" alt="Price photo" />
+        <p>
+          <strong>Konkurencyjne ceny</strong> – Oferujemy doskonały stosunek
+          jakości do ceny, zapewniając inwestycję, która się opłaca.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="../img/start/handshake.png" alt="Handshake photo" />
+        <p>
+          <strong>Ekologia i nowoczesność</strong> – W procesie produkcji
+          stosujemy technologie przyjazne środowisku, a nasze projekty są zgodne
+          z najnowszymi trendami rynkowymi.
+        </p>
+      </div>
+      <div class="card">
+        <img src="../img/start/guarantee.png" alt="Guarantee photo" />
+        <p>
+          <strong>2-letnia gwarancja</strong> – Wszystkie nasze produkty objęte
+          są 2-letnią gwarancją, co daje Ci pewność jakości i dodatkowe poczucie
+          bezpieczeństwa.
+        </p>
+      </div>
+      <div class="card">
+        <img src="../img/start/disassembly.png" alt="Disassembly photo" />
+        <p>
+          <strong>Demontaż</strong> – Oferujemy również demontaż starego
+          ogrodzenia, bram, balustrad, także nie musisz się o nic martwić
+        </p>
+      </div>
+      <div class="card">
+        <img src="../img/start/denied.png" alt="Denied photo" />
+        <p>
+          <strong>Bez zaliczki </strong>
+        </p>
+      </div>
     </div>
   </section>
 
@@ -146,13 +208,30 @@
       Telefon: <a href="tel:+491746229238">+49 174 622 9238</a>
     </p>
   </footer>
+
   <script>
     document
       .getElementById("start-offer-button")
       .addEventListener("click", function (event) {
         event.preventDefault();
-        fetchPage("prices");
-        addCss("prices");
+
+        fetch(`../pages/${page}.html`)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not OK");
+            }
+            return response.text();
+          })
+          .then((data) => {
+            document.querySelector(".start-content").parentNode.innerHTML =
+              data;
+          })
+          .catch((error) => console.error("Error loading content:", error));
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
   </script>
 </main>

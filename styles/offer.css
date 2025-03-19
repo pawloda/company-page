@@ -29,7 +29,7 @@
 }
 
 .subcategory {
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .subcategory h4 {
@@ -40,8 +40,9 @@
 
 .subcategory p {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #666;
+  align-content: center;
 }
 
 .offer-gallery {
@@ -64,12 +65,31 @@
   max-width: 300px;
   margin: 10px;
   text-align: left;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  align-content: center;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2-column layout */
   gap: 20px;
+}
+
+.subcategory {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.subcategory .grid {
+  gap: 10px;
+}
+
+.subcategory .grid img {
+  box-shadow: none;
+  margin: 0px;
 }
 
 .grid:first-child {

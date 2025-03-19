@@ -30,18 +30,23 @@
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  justify-items: left;
+  justify-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-container div {
+  min-height: 300px;
+  align-content: center;
 }
 
 .img-container span {
   position: relative;
-  top: 260px;
-  left: 50px;
+  top: -70px;
+  left: -20px;
   display: block;
   justify-self: left;
-  background-color: #b25919d8;
-  border: 2px solid black;
+  background-color: #b25919;
+  color: white;
   padding: 10px;
   border-radius: 8px;
   text-transform: uppercase;
@@ -49,6 +54,5 @@
 }
 
 .img-container img {
-  margin-left: 5%;
-  height: 300px;
+  width: 900px;
 }
