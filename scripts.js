@@ -16,6 +16,9 @@ const pages = [
 window.onload = function () {
   fetchPages(pages);
   scrollToTop();
+  setTimeout(() => {
+    addButtonFunc();
+  }, 100);
 };
 
 window.addEventListener("scroll", function () {
@@ -114,6 +117,18 @@ function showPage(page) {
   if (pageContent && !pageContent.classList.contains("shown")) {
     pageContent.classList.add("shown");
   }
+}
+
+function addButtonFunc() {
+  document
+    .querySelector("#start-offer-button")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      setTimeout(() => {
+        hidePages();
+        showPage("prices");
+      }, 100);
+    });
 }
 
 // <!-- Modal Carousel -->
