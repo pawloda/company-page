@@ -18,46 +18,46 @@
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-info {
+.contact-section .contact-info {
   font-size: 18px;
   margin-bottom: 20px;
   margin-top: 25px;
 }
 
-.contact-details {
+.contact-section .contact-details {
   text-align: left;
   font-size: 16px;
   margin-bottom: 25px;
 }
 
-.contact-details p {
+.contact-section .contact-details p {
   margin: 8px 0;
 }
 
-.contact-details a {
+.contact-section .contact-details a {
   color: rgba(184, 115, 6);
   text-decoration: none;
   font-weight: bold;
 }
 
-.contact-details a:hover {
+.contact-section .contact-details a:hover {
   text-decoration: underline;
 }
 
 /* Contact Form */
-.contact-form {
+.contact-section .contact-form {
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.contact-form label {
+.contact-section .contact-form label {
   font-weight: bold;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-section .contact-form input,
+.contact-section .contact-form textarea {
   width: 580px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -65,7 +65,7 @@
   font-size: 16px;
 }
 
-.contact-form button {
+.contact-section .contact-form button {
   background: #d2691e;
   color: white;
   padding: 12px;
@@ -76,7 +76,7 @@
   transition: background 0.3s ease;
 }
 
-.contact-form button:hover {
+.contact-section .contact-form button:hover {
   background: #e47541;
   transform: scale(1.02);
   opacity: 0.9;
@@ -84,10 +84,10 @@
 }
 
 /* Scroll Space */
-.scroll-space {
+.contact-section .scroll-space {
   height: 50px;
 }
 
-#message {
+.contact-section #message {
   resize: none;
 }

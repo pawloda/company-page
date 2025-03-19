@@ -1,16 +1,16 @@
-.gallery-section {
+.photogallery-section {
   max-width: 900px;
   margin: auto;
   padding: 20px;
 }
 
 /* Category buttons */
-.category {
+.photogallery-section .category {
   margin-bottom: 20px;
 }
 
 /* Subcategory hidden by default */
-.subcategory {
+.photogallery-section .subcategory {
   margin-top: 20px;
   padding: 60px 10px 10px 10px;
   background: #fff;
@@ -21,7 +21,7 @@
   grid-row: auto;
 }
 
-.gallery-grid {
+.photogallery-section .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -29,12 +29,12 @@
   margin: auto;
 }
 
-.two-columns-grid {
+.photogallery-section .two-columns-grid {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 /* Category Images */
-.category img {
+.photogallery-section .category img {
   width: 100%;
   max-width: 400px;
   height: 250px;
@@ -44,7 +44,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.category a {
+.photogallery-section .category a {
   display: block;
   position: relative;
   text-decoration: none;
@@ -53,7 +53,7 @@
   font-weight: bold;
 }
 
-.category h2 {
+.photogallery-section .category h2 {
   bottom: 10px;
   left: 50%;
   transform: translateY(100%);
@@ -63,7 +63,7 @@
   border-radius: 5px 5px 0px 0px;
 }
 
-.category span {
+.photogallery-section .category span {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -74,16 +74,16 @@
 }
 
 /* Hover effects */
-.category img:hover {
+.photogallery-section .category img:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-.hidden {
+.photogallery-section .hidden {
   display: none;
 }
 
-.modal {
+.photogallery-section .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -95,20 +95,20 @@
   justify-content: center;
 }
 
-.modal-content {
+.photogallery-section .modal-content {
   position: relative;
   background: white;
   padding: 20px;
   text-align: center;
 }
 
-.carousel img {
+.photogallery-section .carousel img {
   max-width: 80%;
   height: auto;
 }
 
-.prev,
-.next {
+.photogallery-section .prev,
+.photogallery-section .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -120,14 +120,15 @@
   font-size: 20px;
 }
 
-.prev {
+.photogallery-section .prev {
   left: 10px;
 }
-.next {
+
+.photogallery-section .next {
   right: 10px;
 }
 
-.close {
+.photogallery-section .close {
   position: absolute;
   top: 10px;
   right: 10px;

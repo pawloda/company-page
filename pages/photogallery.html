@@ -1,4 +1,4 @@
-<main class="gallery-section">
+<main class="photogallery-section">
   <!-- Category: Fences -->
   <div class="category">
     <h2>Płoty</h2>
@@ -67,74 +67,4 @@
       >
     </div>
   </div>
-
-  <!-- Modal Carousel -->
-  <div id="gallery-modal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="carousel">
-        <button class="prev">&#10094;</button>
-        <img id="carousel-image" src="" alt="Gallery Image" />
-        <button class="next">&#10095;</button>
-      </div>
-    </div>
-  </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const galleryItems = document.querySelectorAll(".gallery-item");
-      const modal = document.getElementById("gallery-modal");
-      const carouselImage = document.getElementById("carousel-image");
-      const closeModal = document.querySelector(".close");
-      const prevBtn = document.querySelector(".prev");
-      const nextBtn = document.querySelector(".next");
-
-      let images = [];
-      let currentIndex = 0;
-
-      galleryItems.forEach((item) => {
-        item.addEventListener("click", (event) => {
-          event.preventDefault();
-          const category = item.getAttribute("data-category");
-
-          images = loadImages(category);
-          if (images.length > 0) {
-            currentIndex = 0;
-            updateCarousel();
-            modal.classList.remove("hidden");
-          }
-        });
-      });
-
-      closeModal.addEventListener("click", () => {
-        modal.classList.add("hidden");
-      });
-
-      prevBtn.addEventListener("click", () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateCarousel();
-        }
-      });
-
-      nextBtn.addEventListener("click", () => {
-        if (currentIndex < images.length - 1) {
-          currentIndex++;
-          updateCarousel();
-        }
-      });
-
-      function loadImages(category) {
-        let imageList = [];
-        for (let i = 0; i < 5; i++) {
-          let imgPath = `../img/photogallery/${category}/${i}.png`;
-          imageList.push(imgPath);
-        }
-        return imageList;
-      }
-
-      function updateCarousel() {
-        carouselImage.src = images[currentIndex];
-      }
-    });
-  </script>
 </main>

@@ -1,8 +1,19 @@
 "use strict";
 
 window.onload = function () {
-  fetchPage(`start`);
-  addCss(`start`);
+  const pages = [
+    "start",
+    "about",
+    "offer",
+    "templates",
+    "photogallery",
+    "cases",
+    "rates",
+    "blog",
+    "prices",
+    "contact",
+  ];
+  fetchPages(pages);
   scrollToTop();
 };
 
@@ -36,6 +47,14 @@ document.querySelectorAll(".nav-el a").forEach((link) => {
   });
 });
 
+function fetchPages(pages) {
+  pages.forEach((page) => {
+    fetchPage(page);
+    addCss(page);
+  });
+  scrollToTop();
+}
+
 function fetchPage(page) {
   fetch(`pages/${page}.html`)
     .then((response) => {
@@ -45,18 +64,22 @@ function fetchPage(page) {
       return response.text();
     })
     .then((data) => {
-      document.querySelector(".content").innerHTML = data;
+      let contentHTML = document.querySelector(".content");
+      contentHTML.innerHTML = contentHTML.innerHTML.concat(data);
     })
     .catch((error) => console.error("Error loading content:", error));
   scrollToTop();
 }
 
 function addCss(page) {
-  document.head.removeChild(document.head.lastElementChild);
   const link = document.createElement("link");
   link.rel = "stylesheet";
   link.href = `styles/${page}.css`;
   document.head.appendChild(link);
+}
+
+function hidePage(page) {
+  document.querySelector(".content");
 }
 
 function scrollToTop() {
@@ -65,3 +88,71 @@ function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+// <!-- Modal Carousel -->
+//   <div id="gallery-modal" class="modal hidden">
+//     <div class="modal-content">
+//       <span class="close">&times;</span>
+//       <div class="carousel">
+//         <button class="prev">&#10094;</button>
+//         <img id="carousel-image" src="" alt="Gallery Image" />
+//         <button class="next">&#10095;</button>
+//       </div>
+//     </div>
+//   </div>
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  const modal = document.getElementById("gallery-modal");
+  const carouselImage = document.getElementById("carousel-image");
+  const closeModal = document.querySelector(".close");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  let images = [];
+  let currentIndex = 0;
+
+  galleryItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      const category = item.getAttribute("data-category");
+
+      images = loadImages(category);
+      if (images.length > 0) {
+        currentIndex = 0;
+        updateCarousel();
+        modal.classList.remove("hidden");
+      }
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < images.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  function loadImages(category) {
+    let imageList = [];
+    for (let i = 0; i < 5; i++) {
+      let imgPath = `../img/photogallery/${category}/${i}.png`;
+      imageList.push(imgPath);
+    }
+    return imageList;
+  }
+
+  function updateCarousel() {
+    carouselImage.src = images[currentIndex];
+  }
+});

@@ -1,5 +1,5 @@
 /* About Section */
-.about {
+.about-section .about {
   margin-top: 20px;
   display: inline-block;
   background-color: transparent;
@@ -8,7 +8,7 @@
   background: linear-gradient(to bottom, #f4f4f9, #7f7f88, black 80%);
 }
 
-.text-content {
+.about-section .text-content {
   display: inline-block;
   font-size: 20px;
   text-align: left;
@@ -20,7 +20,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.text-content p {
+.about-section .text-content p {
   margin-top: 60px;
   margin-right: 260px;
   line-height: 2;
@@ -29,17 +29,17 @@
   font-style: italic;
 }
 
-.image-content {
+.about-section .image-content {
   background: black;
 }
 
-.image-content img {
+.about-section .image-content img {
   width: 450px;
   height: auto;
 }
 
 /* Offer Section */
-.offer {
+.about-section .offer {
   background: white;
   padding: 30px;
   border-radius: 10px;
@@ -51,7 +51,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.offer ul {
+.about-section .offer ul {
   list-style: square;
   padding: 0;
   text-align: left;
@@ -59,13 +59,13 @@
   margin-bottom: 30px;
 }
 
-.offer ul li {
+.about-section .offer ul li {
   margin-left: 25%;
   font-size: 24px;
   padding: 5px;
 }
 
-.offer h2 {
+.about-section .offer h2 {
   text-transform: uppercase;
   font-size: 30px;
   margin-top: 20px;
@@ -74,17 +74,17 @@
   color: #b25819;
 }
 
-.offer ul li a {
+.about-section .offer ul li a {
   text-decoration: none;
   font-weight: 400;
   color: #000;
 }
 
-.offer ul li a:hover {
+.about-section .offer ul li a:hover {
   color: #d2691e;
 }
 
-#fence-picture {
+.about-section #fence-picture {
   width: 300px;
   border-radius: 50%;
   float: right;
@@ -94,7 +94,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#worker-picture {
+.about-section #worker-picture {
   width: 300px;
   border-radius: 50%;
   float: left;

@@ -2,7 +2,7 @@
   min-height: 500px;
 }
 
-.templates-content {
+.templates-section .templates-content {
   margin-top: 60px;
   font-size: 40px;
   font-weight: 600;
@@ -24,7 +24,7 @@
   opacity: 0.7;
 }
 
-.img-container {
+.templates-section .img-container {
   border-radius: 8px;
   background-color: white;
   margin-left: 10px;
@@ -34,12 +34,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.img-container div {
+.templates-section .img-container div {
   min-height: 300px;
   align-content: center;
 }
 
-.img-container span {
+.templates-section .img-container span {
   position: relative;
   top: -70px;
   left: -20px;
@@ -53,6 +53,6 @@
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
-.img-container img {
+.templates-section .img-container img {
   width: 900px;
 }

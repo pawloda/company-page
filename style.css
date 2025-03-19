@@ -150,6 +150,10 @@ body {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.hidden {
+  display: none;
+}
+
 /* Others */
 #main-container {
   width: 100%;
