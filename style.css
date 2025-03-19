@@ -35,7 +35,12 @@ body {
   font-size: 14px;
   border-bottom: 1px solid;
   border-bottom-color: rgba(184, 115, 6);
+}
+
+.top-header a {
   color: rgb(145, 89, 1);
+  display: flex;
+  gap: 10px;
 }
 
 .top-left {
@@ -47,6 +52,7 @@ body {
 }
 
 .top-right {
+  font-size: 16px;
   float: right;
   display: flex;
   gap: 15px;
@@ -58,14 +64,14 @@ body {
 
 .social-icon {
   text-decoration: none;
-  color: #333;
   font-size: 16px;
   padding: 5px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
 }
 
 .social-icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 /* Middle Black Header */
@@ -141,6 +147,7 @@ body {
 /* Scrollable Content */
 .content {
   text-align: center;
+  min-height: 800px;
 }
 
 /* Footer */
@@ -157,8 +164,26 @@ body {
 
 .hidden {
   display: none;
+  transition: display 2s;
+}
+
+.hidden-tr {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.01s ease, transform 0.01s ease, visibility 0.01s;
 }
 
 .shown {
   display: block !important;
+  transition: display 2s;
+}
+
+.shown-tr {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s !important;
 }

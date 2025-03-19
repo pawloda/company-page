@@ -15,10 +15,11 @@ const pages = [
 
 window.onload = function () {
   fetchPages(pages);
-  scrollToTop();
   setTimeout(() => {
     addButtonFunc();
+    showPage("start");
   }, 100);
+  scrollToTop();
 };
 
 window.addEventListener("scroll", function () {
@@ -98,11 +99,17 @@ function hidePage(page) {
   if (!pageContent) {
     console.error(`Element .${page}-section not found`);
   }
+  if (pageContent && pageContent.classList.contains("shown-tr")) {
+    pageContent.classList.remove("shown-tr");
+  }
   if (pageContent && pageContent.classList.contains("shown")) {
     pageContent.classList.remove("shown");
   }
+  if (pageContent && !pageContent.classList.contains("hidden-tr")) {
+    pageContent.classList.add("hidden-tr");
+  }
   if (pageContent && !pageContent.classList.contains("hidden")) {
-    pageContent.classList.add("hidden");
+    setTimeout(() => pageContent.classList.add("hidden"), 400);
   }
 }
 
@@ -111,11 +118,17 @@ function showPage(page) {
   if (!pageContent) {
     console.error(`Element .${page}-section not found`);
   }
+  if (pageContent && pageContent.classList.contains("hidden-tr")) {
+    pageContent.classList.remove("hidden-tr");
+  }
   if (pageContent && pageContent.classList.contains("hidden")) {
     pageContent.classList.remove("hidden");
   }
   if (pageContent && !pageContent.classList.contains("shown")) {
     pageContent.classList.add("shown");
+  }
+  if (pageContent && !pageContent.classList.contains("shown-tr")) {
+    setTimeout(() => pageContent.classList.add("shown-tr"), 10);
   }
 }
 

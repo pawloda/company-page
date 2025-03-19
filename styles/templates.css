@@ -1,6 +1,9 @@
 .templates-section {
-  min-height: 500px;
   display: none;
+  min-height: 500px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .templates-section .templates-content {

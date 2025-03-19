@@ -1,6 +1,9 @@
 .cases-section {
-  height: 500px;
   display: none;
+  height: 500px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .cases-section .cases-content {
