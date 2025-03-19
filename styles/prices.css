@@ -1,5 +1,5 @@
 /* General Form Styles */
-.price-section {
+.prices-section {
   text-align: center;
   padding: 30px 20px;
   background: #f9f9f9;
@@ -9,56 +9,57 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
   margin-bottom: 20px;
+  display: none;
 }
 
-.price-section .title {
+.prices-section .title {
   margin-bottom: 15px;
   color: #b25819;
   font-weight: 600;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.price-section .description {
+.prices-section .description {
   font-size: 16px;
   margin-bottom: 30px;
   line-height: 1.4;
 }
 
 /* Form Styling */
-.price-section .inquiry-form {
+.prices-section .inquiry-form {
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.price-section .inquiry-form img {
+.prices-section .inquiry-form img {
   border-radius: 8px;
   margin: 20px 50px 10px 50px;
   border: 2px solid rgba(184, 115, 6);
 }
 
-.price-section .inquiry-form fieldset {
+.prices-section .inquiry-form fieldset {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 20px;
 }
 
-.price-section .inquiry-form fieldset legend {
+.prices-section .inquiry-form fieldset legend {
   font-weight: bold;
   font-size: 18px;
 }
 
-.price-section .inquiry-form fieldset label {
+.prices-section .inquiry-form fieldset label {
   font-weight: bold;
   display: block;
   margin-top: 10px;
 }
 
-.price-section .inquiry-form input,
-.price-section .inquiry-form select,
-.price-section .inquiry-form textarea {
+.prices-section .inquiry-form input,
+.prices-section .inquiry-form select,
+.prices-section .inquiry-form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -67,56 +68,56 @@
   margin-top: 5px;
 }
 
-.price-section .inquiry-form fieldset textarea {
+.prices-section .inquiry-form fieldset textarea {
   width: 97%;
   resize: none;
 }
 
-.price-section .inquiry-form input {
+.prices-section .inquiry-form input {
   width: 97%;
 }
 
-.price-section .inquiry-form select {
+.prices-section .inquiry-form select {
   margin-bottom: 20px;
 }
 
-.price-section .radio-group {
+.prices-section .radio-group {
   display: block;
   gap: 10px;
   margin-top: 5px;
 }
 
-.price-section .inquiry-form fieldset .radio-group label {
+.prices-section .inquiry-form fieldset .radio-group label {
   font-weight: bold;
   display: inline-block;
   margin-top: 10px;
   width: 10%;
 }
 
-.price-section .inquiry-form fieldset .radio-group .label-main {
+.prices-section .inquiry-form fieldset .radio-group .label-main {
   width: 30%;
 }
 
-.price-section .radio-group input {
+.prices-section .radio-group input {
   width: auto;
   display: inline-block;
 }
 
-.price-section .inline-el {
+.prices-section .inline-el {
   display: inline-block;
 }
 
-.price-section .inquiry-form input[type="file"] {
+.prices-section .inquiry-form input[type="file"] {
   border: none;
   padding: 5px;
   margin-bottom: 10px;
 }
 
-.price-section .inquiry-form input[type="radio"] {
+.prices-section .inquiry-form input[type="radio"] {
   accent-color: #d2691e;
 }
 
-.price-section .inquiry-form button {
+.prices-section .inquiry-form button {
   background: #d2691e;
   color: white;
   padding: 12px;
@@ -128,7 +129,7 @@
   width: 100%;
 }
 
-.price-section .inquiry-form button:hover {
+.prices-section .inquiry-form button:hover {
   background: #e47541;
   transform: scale(1.02);
   opacity: 0.9;

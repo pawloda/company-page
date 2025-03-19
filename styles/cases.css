@@ -1,5 +1,6 @@
 .cases-section {
   height: 500px;
+  display: none;
 }
 
 .cases-section .cases-content {

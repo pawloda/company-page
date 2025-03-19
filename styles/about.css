@@ -1,4 +1,8 @@
 /* About Section */
+.about-section {
+  display: none;
+}
+
 .about-section .about {
   margin-top: 20px;
   display: inline-block;

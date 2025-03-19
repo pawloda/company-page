@@ -1,5 +1,6 @@
 .blog-section {
   height: 500px;
+  display: none;
 }
 
 .blog-section .blog-content {

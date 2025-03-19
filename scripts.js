@@ -1,18 +1,19 @@
 "use strict";
 
+const pages = [
+  "start",
+  "about",
+  "offer",
+  "templates",
+  "photogallery",
+  "cases",
+  "rates",
+  "blog",
+  "prices",
+  "contact",
+];
+
 window.onload = function () {
-  const pages = [
-    "start",
-    "about",
-    "offer",
-    "templates",
-    "photogallery",
-    "cases",
-    "rates",
-    "blog",
-    "prices",
-    "contact",
-  ];
   fetchPages(pages);
   scrollToTop();
 };
@@ -41,8 +42,8 @@ document.querySelectorAll(".nav-el a").forEach((link) => {
   link.addEventListener("click", function (event) {
     event.preventDefault();
     setTimeout(() => {
-      fetchPage(this.parentElement.id);
-      addCss(this.parentElement.id);
+      hidePages();
+      showPage(this.parentElement.id);
     }, 100);
   });
 });
@@ -78,15 +79,41 @@ function addCss(page) {
   document.head.appendChild(link);
 }
 
-function hidePage(page) {
-  document.querySelector(".content");
-}
-
 function scrollToTop() {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
+}
+
+function hidePages() {
+  pages.forEach((page) => hidePage(page));
+}
+
+function hidePage(page) {
+  const pageContent = document.querySelector(`.${page}-section`);
+  if (!pageContent) {
+    console.error(`Element .${page}-section not found`);
+  }
+  if (pageContent && pageContent.classList.contains("shown")) {
+    pageContent.classList.remove("shown");
+  }
+  if (pageContent && !pageContent.classList.contains("hidden")) {
+    pageContent.classList.add("hidden");
+  }
+}
+
+function showPage(page) {
+  const pageContent = document.querySelector(`.${page}-section`);
+  if (!pageContent) {
+    console.error(`Element .${page}-section not found`);
+  }
+  if (pageContent && pageContent.classList.contains("hidden")) {
+    pageContent.classList.remove("hidden");
+  }
+  if (pageContent && !pageContent.classList.contains("shown")) {
+    pageContent.classList.add("shown");
+  }
 }
 
 // <!-- Modal Carousel -->
@@ -100,59 +127,59 @@ function scrollToTop() {
 //       </div>
 //     </div>
 //   </div>
-document.addEventListener("DOMContentLoaded", () => {
-  const galleryItems = document.querySelectorAll(".gallery-item");
-  const modal = document.getElementById("gallery-modal");
-  const carouselImage = document.getElementById("carousel-image");
-  const closeModal = document.querySelector(".close");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const galleryItems = document.querySelectorAll(".gallery-item");
+//   const modal = document.getElementById("gallery-modal");
+//   const carouselImage = document.getElementById("carousel-image");
+//   const closeModal = document.querySelector(".close");
+//   const prevBtn = document.querySelector(".prev");
+//   const nextBtn = document.querySelector(".next");
 
-  let images = [];
-  let currentIndex = 0;
+//   let images = [];
+//   let currentIndex = 0;
 
-  galleryItems.forEach((item) => {
-    item.addEventListener("click", (event) => {
-      event.preventDefault();
-      const category = item.getAttribute("data-category");
+//   galleryItems.forEach((item) => {
+//     item.addEventListener("click", (event) => {
+//       event.preventDefault();
+//       const category = item.getAttribute("data-category");
 
-      images = loadImages(category);
-      if (images.length > 0) {
-        currentIndex = 0;
-        updateCarousel();
-        modal.classList.remove("hidden");
-      }
-    });
-  });
+//       images = loadImages(category);
+//       if (images.length > 0) {
+//         currentIndex = 0;
+//         updateCarousel();
+//         modal.classList.remove("hidden");
+//       }
+//     });
+//   });
 
-  closeModal.addEventListener("click", () => {
-    modal.classList.add("hidden");
-  });
+//   closeModal.addEventListener("click", () => {
+//     modal.classList.add("hidden");
+//   });
 
-  prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
+//   prevBtn.addEventListener("click", () => {
+//     if (currentIndex > 0) {
+//       currentIndex--;
+//       updateCarousel();
+//     }
+//   });
 
-  nextBtn.addEventListener("click", () => {
-    if (currentIndex < images.length - 1) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
+//   nextBtn.addEventListener("click", () => {
+//     if (currentIndex < images.length - 1) {
+//       currentIndex++;
+//       updateCarousel();
+//     }
+//   });
 
-  function loadImages(category) {
-    let imageList = [];
-    for (let i = 0; i < 5; i++) {
-      let imgPath = `../img/photogallery/${category}/${i}.png`;
-      imageList.push(imgPath);
-    }
-    return imageList;
-  }
+//   function loadImages(category) {
+//     let imageList = [];
+//     for (let i = 0; i < 5; i++) {
+//       let imgPath = `../img/photogallery/${category}/${i}.png`;
+//       imageList.push(imgPath);
+//     }
+//     return imageList;
+//   }
 
-  function updateCarousel() {
-    carouselImage.src = images[currentIndex];
-  }
-});
+//   function updateCarousel() {
+//     carouselImage.src = images[currentIndex];
+//   }
+// });
