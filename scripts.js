@@ -303,6 +303,7 @@ function addCarouselFunc() {
     while (true) {
       let pngUrl = `${basePath}${index}.png`;
       let jpegUrl = `${basePath}${index}.jpeg`;
+      let jpgUrl = `${basePath}${index}.jpg`;
 
       // Check PNG first
       let response = await fetch(pngUrl, { method: "HEAD" }).catch(() => null);
@@ -316,7 +317,14 @@ function addCarouselFunc() {
           images.push(jpegUrl);
           index++;
         } else {
-          break;
+          // If PNG fails, check JPG
+          response = await fetch(jpgUrl, { method: "HEAD" }).catch(() => null);
+          if (response.ok) {
+            images.push(jpgUrl);
+            index++;
+          } else {
+            break;
+          }
         }
       }
     }
