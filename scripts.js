@@ -18,6 +18,7 @@ window.onload = function () {
   setTimeout(() => {
     addStartButtonFunc();
     addStartImgFunc();
+    addCarouselFunc();
     showPage("start");
   }, 100);
   scrollToTop();
@@ -248,70 +249,103 @@ function addStartImgFunc() {
   );
 }
 
-// <!-- Modal Carousel -->
-//   <div id="gallery-modal" class="modal hidden">
-//     <div class="modal-content">
-//       <span class="close">&times;</span>
-//       <div class="carousel">
-//         <button class="prev">&#10094;</button>
-//         <img id="carousel-image" src="" alt="Gallery Image" />
-//         <button class="next">&#10095;</button>
-//       </div>
-//     </div>
-//   </div>
-// document.addEventListener("DOMContentLoaded", () => {
-//   const galleryItems = document.querySelectorAll(".gallery-item");
-//   const modal = document.getElementById("gallery-modal");
-//   const carouselImage = document.getElementById("carousel-image");
-//   const closeModal = document.querySelector(".close");
-//   const prevBtn = document.querySelector(".prev");
-//   const nextBtn = document.querySelector(".next");
+function addCarouselFunc() {
+  const modal = document.getElementById("gallery-modal");
+  const carouselImage = document.getElementById("carousel-image");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  const closeModal = document.querySelector(".close");
+  const overlay = document.querySelector(".modal-overlay");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
 
-//   let images = [];
-//   let currentIndex = 0;
+  let images = [];
+  let currentIndex = 0;
 
-//   galleryItems.forEach((item) => {
-//     item.addEventListener("click", (event) => {
-//       event.preventDefault();
-//       const category = item.getAttribute("data-category");
+  // Load images and open modal when clicking on a gallery image
+  galleryItems.forEach((item) => {
+    item.addEventListener("click", async (event) => {
+      event.preventDefault();
 
-//       images = loadImages(category);
-//       if (images.length > 0) {
-//         currentIndex = 0;
-//         updateCarousel();
-//         modal.classList.remove("hidden");
-//       }
-//     });
-//   });
+      // Get all images from the clicked category
+      const category = item.dataset.category;
+      try {
+        images = await getImagesForCategory(category); // ✅ WAIT for images to load
+      } catch (error) {
+        console.error("There is a problem with images:", error);
+        return;
+      }
 
-//   closeModal.addEventListener("click", () => {
-//     modal.classList.add("hidden");
-//   });
+      if (images.length === 0) return;
 
-//   prevBtn.addEventListener("click", () => {
-//     if (currentIndex > 0) {
-//       currentIndex--;
-//       updateCarousel();
-//     }
-//   });
+      currentIndex = 0; // Reset to first image
+      showImage(currentIndex);
 
-//   nextBtn.addEventListener("click", () => {
-//     if (currentIndex < images.length - 1) {
-//       currentIndex++;
-//       updateCarousel();
-//     }
-//   });
+      modal.classList.add("shown");
+    });
+  });
 
-//   function loadImages(category) {
-//     let imageList = [];
-//     for (let i = 0; i < 5; i++) {
-//       let imgPath = `../img/photogallery/${category}/${i}.png`;
-//       imageList.push(imgPath);
-//     }
-//     return imageList;
-//   }
+  async function getImagesForCategory(category) {
+    const basePath = `../img/photogallery/${category}/`;
+    let images = [];
+    let index = 0;
 
-//   function updateCarousel() {
-//     carouselImage.src = images[currentIndex];
-//   }
-// });
+    while (true) {
+      let pngUrl = `${basePath}${index}.png`;
+      let jpegUrl = `${basePath}${index}.jpeg`;
+
+      // Check PNG first
+      let response = await fetch(pngUrl, { method: "HEAD" }).catch(() => null);
+      if (response.ok) {
+        images.push(pngUrl);
+        index++;
+      } else {
+        // If PNG fails, check JPEG
+        response = await fetch(jpegUrl, { method: "HEAD" }).catch(() => null);
+        if (response.ok) {
+          images.push(jpegUrl);
+          index++;
+        } else {
+          break;
+        }
+      }
+    }
+    return images;
+  }
+
+  // Function to display the current image in the carousel
+  function showImage(index) {
+    if (index >= 0 && index < images.length) {
+      carouselImage.src = images[index];
+    }
+  }
+
+  // Close modal when clicking on close button or overlay
+  closeModal.addEventListener("click", closeGallery);
+  overlay.addEventListener("click", closeGallery);
+
+  function closeGallery() {
+    modal.classList.remove("shown");
+  }
+
+  // Next and Prev Buttons
+  nextButton.addEventListener("click", () => {
+    if (currentIndex < images.length - 1) {
+      currentIndex++;
+      showImage(currentIndex);
+    }
+  });
+
+  prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      showImage(currentIndex);
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeGallery();
+    }
+  });
+}

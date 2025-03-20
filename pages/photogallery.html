@@ -3,35 +3,35 @@
   <div class="category">
     <h2>Płoty</h2>
     <div class="subcategory gallery-grid">
-      <a href="#klasyczne"
+      <a href="#" class="gallery-item" data-category="fence/classic"
         ><img
           src="../img/photogallery/fence/classic/0.png"
           alt="Classic photo"
         /><span>Klasyczne</span></a
       >
-      <a href="#nowoczesne"
+      <a href="#" class="gallery-item" data-category="fence/modern"
         ><img
           src="../img/photogallery/fence/modern/0.png"
           alt="Modern photo"
         /><span>Nowoczesne</span></a
       >
-      <a href="#plastikowe"
+      <a href="#" class="gallery-item" data-category="fence/plastic"
         ><img
           src="../img/photogallery/fence/plastic/0.png"
           alt="Plastic photo"
         /><span>Plastikowe</span></a
       >
-      <a href="#wpc"
+      <a href="#" class="gallery-item" data-category="fence/wpc"
         ><img src="../img/photogallery/fence/wpc/0.jpg" alt="WPC photo" /><span
           >WPC</span
         ></a
       >
-      <a href="#cnc"
+      <a href="#" class="gallery-item" data-category="fence/cnc"
         ><img src="../img/photogallery/fence/cnc/0.jpg" alt="CNC photo" /><span
           >CNC</span
         ></a
       >
-      <a href="#beton"
+      <a href="#" class="gallery-item" data-category="fence/concrete"
         ><img
           src="../img/photogallery/fence/concrete/0.jpg"
           alt="Concrete photo"
@@ -44,27 +44,40 @@
   <div class="category">
     <h2>Pozostałe</h2>
     <div class="subcategory gallery-grid two-columns-grid">
-      <a href="#bramy"
+      <a href="#" class="gallery-item" data-category="gates"
         ><img src="../img/photogallery/gates/0.png" alt="Gate photo" /><span
           >Bramy i furtki</span
         ></a
       >
-      <a href="#balustrady"
+      <a href="#" class="gallery-item" data-category="balustrade"
         ><img
           src="../img/photogallery/balustrade/0.png"
           alt="Balustrade photo"
         /><span>Balustrady</span></a
       >
-      <a href="#maty"
+      <a href="#" class="gallery-item" data-category="meshes"
         ><img src="../img/photogallery/meshes/0.png" alt="Mesh photo" /><span
           >Maty prętowane</span
         ></a
       >
-      <a href="#inne"
+      <a href="#" class="gallery-item" data-category="others"
         ><img src="../img/photogallery/others/0.png" alt="Others photo" /><span
           >Inne</span
         ></a
       >
+    </div>
+  </div>
+
+  <!-- Modal Carousel -->
+  <div id="gallery-modal" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="carousel">
+        <button class="prev">&#10094;</button>
+        <img id="carousel-image" src="" alt="Gallery Image" />
+        <button class="next">&#10095;</button>
+      </div>
     </div>
   </div>
 </div>
