@@ -257,9 +257,19 @@ function addCarouselFunc() {
   const overlay = document.querySelector(".modal-overlay");
   const prevButton = document.querySelector(".prev");
   const nextButton = document.querySelector(".next");
+  const imageCounter = document.createElement("div"); // New element for the image counter
 
   let images = [];
   let currentIndex = 0;
+
+  // Add image counter to the modal
+  imageCounter.style.position = "absolute";
+  imageCounter.style.bottom = "20px";
+  imageCounter.style.left = "50%";
+  imageCounter.style.transform = "translateX(-50%)";
+  imageCounter.style.fontSize = "18px";
+  imageCounter.style.color = "#000";
+  modal.querySelector(".modal-content").appendChild(imageCounter);
 
   // Load images and open modal when clicking on a gallery image
   galleryItems.forEach((item) => {
@@ -281,6 +291,7 @@ function addCarouselFunc() {
       showImage(currentIndex);
 
       modal.classList.add("shown");
+      scrollToTop();
     });
   });
 
@@ -316,7 +327,15 @@ function addCarouselFunc() {
   function showImage(index) {
     if (index >= 0 && index < images.length) {
       carouselImage.src = images[index];
+      imageCounter.textContent = `${index + 1} / ${images.length}`; // Update the image counter
+      updateButtonState();
     }
+  }
+
+  // Update button state (disable if on the first/last image)
+  function updateButtonState() {
+    prevButton.disabled = currentIndex === 0; // Disable prev button on first image
+    nextButton.disabled = currentIndex === images.length - 1; // Disable next button on last image
   }
 
   // Close modal when clicking on close button or overlay
