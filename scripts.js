@@ -19,6 +19,7 @@ window.onload = function () {
     addStartButtonFunc();
     addStartImgFunc();
     addCarouselFunc();
+    addEmailFunc();
     showPage("start");
   }, 100);
   scrollToTop();
@@ -375,4 +376,75 @@ function addCarouselFunc() {
       closeGallery();
     }
   });
+}
+
+function addEmailFunc() {
+  // Initialize EmailJS (You need to set up an EmailJS account and get your credentials)
+  emailjs.init("user_your_emailjs_user_id");
+
+  // Handle form submission
+  document
+    .querySelector(".inquiry-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Prepare form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+
+      // Send email using EmailJS
+      emailjs
+        .sendForm("service_your_service_id", "template_your_template_id", this)
+        .then(
+          function (response) {
+            console.log("SUCCESS", response);
+            // Show the pop-up confirmation
+            showPopup();
+          },
+          function (error) {
+            console.error("FAILED", error);
+            // Optionally, handle the error case
+            alert("Coś poszło nie tak. Spróbuj ponownie.");
+          }
+        );
+    });
+
+  // Handle form submission
+  document
+    .querySelector(".contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Prepare form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+
+      // Send email using EmailJS
+      emailjs
+        .sendForm("service_your_service_id", "template_your_template_id", this)
+        .then(
+          function (response) {
+            console.log("SUCCESS", response);
+            // Show the pop-up confirmation
+            showPopup();
+          },
+          function (error) {
+            console.error("FAILED", error);
+            // Optionally, handle the error case
+            alert("Coś poszło nie tak. Spróbuj ponownie.");
+          }
+        );
+    });
+
+  // Show the pop-up
+  function showPopup() {
+    const popup = document.getElementById("popup");
+    popup.classList.add("shown");
+  }
+
+  // Close the pop-up
+  function closePopup() {
+    const popup = document.getElementById("popup");
+    popup.classList.remove("shown");
+  }
 }
