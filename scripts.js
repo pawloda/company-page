@@ -20,6 +20,7 @@ window.onload = function () {
     addStartImgFunc();
     addCarouselFunc();
     addEmailFunc();
+    changeTextInApp();
     showPage("start");
   }, 100);
   scrollToTop();
@@ -447,4 +448,23 @@ function addEmailFunc() {
     const popup = document.getElementById("popup");
     popup.classList.remove("shown");
   }
+}
+
+// Fetch user location
+function changeTextInApp() {
+  fetch("https://ip-api.com/json/")
+    .then((response) => response.json())
+    .then((data) => {
+      const country = data.countryCode; // Get country code (PL for Poland)
+      const lang = country === "PL" ? "pl" : country === "DE" ? "de" : "en"; // Set language
+
+      // Apply translations
+      document.querySelectorAll("[data-de]").forEach((element) => {
+        // element.innerText = element.getAttribute(`data-${lang}`);
+        element.innerText = element.getAttribute(`data-en`);
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching location:", error);
+    });
 }

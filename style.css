@@ -1,3 +1,15 @@
+/* Colors
+#headers rgb(163, 122, 8)
+#tone text rgb(133, 70, 15)
+#link-text #a27a4b
+
+#basic #B87306;
+#tint #D39A3A 
+#tone-dark #6F4203
+#background #F8E7B1
+#action #FF8C1A
+*/
+
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -34,11 +46,11 @@ body {
   text-align: center;
   font-size: 14px;
   border-bottom: 1px solid;
-  border-bottom-color: rgba(184, 115, 6);
+  border-bottom-color: #a27a4b;
 }
 
 .top-header a {
-  color: rgb(145, 89, 1);
+  color: #a27a4b;
   display: flex;
   gap: 10px;
 }
@@ -138,7 +150,7 @@ body {
 }
 
 .current {
-  background: rgb(145, 89, 1);
+  background: #8d6605;
   border: 1px;
   border-radius: 6px;
   transition: all 0.2s ease-in-out;

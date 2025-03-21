@@ -13,7 +13,7 @@
 }
 
 .start-section .hero .hero-content p {
-  color: #b4896abc;
+  color: #8f590eb1;
 }
 
 .start-section .hero-content {
@@ -42,14 +42,14 @@
 }
 
 .start-section .primary {
-  background: #d2691e;
+  background: #b87306;
   color: white;
 }
 
 .start-section .secondary {
   background: white;
-  color: #b25819;
-  border: 2px solid #d2691e;
+  color: #b87306;
+  border: 2px solid #b87306;
 }
 
 .start-section .about,
@@ -111,7 +111,7 @@
 }
 
 .start-section .card {
-  background-color: #af6e4052;
+  background-color: #e9e2ce;
   color: rgba(0, 0, 0, 0.796);
 }
 
@@ -197,7 +197,7 @@
 }
 
 .start-section #contact-footer {
-  background-color: #d2691e;
+  background-color: rgb(163, 122, 8);
   color: white;
   padding: 20px;
   width: 400px;
