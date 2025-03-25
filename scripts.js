@@ -20,7 +20,7 @@ window.onload = function () {
     addStartImgFunc();
     addCarouselFunc();
     addEmailFunc();
-    changeTextInApp();
+    updateLanguage("DE");
     showPage("start");
   }, 100);
   scrollToTop();
@@ -450,21 +450,44 @@ function addEmailFunc() {
   }
 }
 
-// Fetch user location
-function changeTextInApp() {
-  fetch("https://ip-api.com/json/")
-    .then((response) => response.json())
-    .then((data) => {
-      const country = data.countryCode; // Get country code (PL for Poland)
-      const lang = country === "PL" ? "pl" : country === "DE" ? "de" : "en"; // Set language
-
-      // Apply translations
-      document.querySelectorAll("[data-de]").forEach((element) => {
-        // element.innerText = element.getAttribute(`data-${lang}`);
-        element.innerText = element.getAttribute(`data-en`);
-      });
-    })
-    .catch((error) => {
-      console.error("Error fetching location:", error);
-    });
+// Toggle burger menu
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("menu-open");
 }
+
+function closeMenu() {
+  document.getElementById("menu").classList.remove("menu-open");
+}
+
+// Hide menu when clicking outside
+document.addEventListener("click", function (event) {
+  const menu = document.getElementById("menu");
+  const burgerIcon = document.querySelector(".burger-icon");
+
+  // Check if the clicked element is NOT inside the menu or the burger icon
+  if (!menu.contains(event.target) && !burgerIcon.contains(event.target)) {
+    closeMenu();
+  }
+});
+
+// Function to update the page text
+function updateLanguage(lang) {
+  const finalLang = lang === "PL" ? "pl" : lang === "DE" ? "de" : "en"; // Set language
+  //     // Apply translations
+  document.querySelectorAll("[data-de]").forEach((element) => {
+    element.innerText = element.getAttribute(`data-${finalLang}`);
+  });
+
+  // Store selected language in localStorage
+  localStorage.setItem("selectedLanguage", lang);
+}
+
+// Event listeners for language options
+document.querySelectorAll(".lang-option").forEach((option) => {
+  option.addEventListener("click", function () {
+    const selectedLang = this.getAttribute("data-lang").toUpperCase();
+    document.querySelector(".burger-icon").innerHTML = `${selectedLang} ☰`;
+    updateLanguage(selectedLang);
+    closeMenu(); // Close menu after selection
+  });
+});
