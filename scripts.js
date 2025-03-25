@@ -23,7 +23,6 @@ window.onload = function () {
     updateLanguage("DE");
     showPage("start");
   }, 100);
-  scrollToTop();
 };
 
 window.addEventListener("scroll", function () {
@@ -459,6 +458,18 @@ function closeMenu() {
   document.getElementById("menu").classList.remove("menu-open");
 }
 
+function updateFontSizeInBar(Lang) {
+  if (Lang === "DE") {
+    document
+      .querySelectorAll(".nav-txt")
+      .forEach((el) => el.classList.add("smaller-font"));
+  } else {
+    document
+      .querySelectorAll(".nav-txt")
+      .forEach((el) => el.classList.remove("smaller-font"));
+  }
+}
+
 // Hide menu when clicking outside
 document.addEventListener("click", function (event) {
   const menu = document.getElementById("menu");
@@ -473,13 +484,12 @@ document.addEventListener("click", function (event) {
 // Function to update the page text
 function updateLanguage(lang) {
   const finalLang = lang === "PL" ? "pl" : lang === "DE" ? "de" : "en"; // Set language
+
+  updateFontSizeInBar(finalLang.toUpperCase());
   //     // Apply translations
   document.querySelectorAll("[data-de]").forEach((element) => {
     element.innerText = element.getAttribute(`data-${finalLang}`);
   });
-
-  // Store selected language in localStorage
-  localStorage.setItem("selectedLanguage", lang);
 }
 
 // Event listeners for language options
@@ -489,5 +499,14 @@ document.querySelectorAll(".lang-option").forEach((option) => {
     document.querySelector(".burger-icon").innerHTML = `${selectedLang} ☰`;
     updateLanguage(selectedLang);
     closeMenu(); // Close menu after selection
+    setTimeout(() => {
+      hidePages();
+      showPage("start");
+    }, 100);
+
+    document
+      .querySelectorAll(".nav-el")
+      .forEach((item) => item.classList.remove("current"));
+    document.querySelector("#start").classList.add("current");
   });
 });

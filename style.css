@@ -201,6 +201,11 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+.main-nav ul li .smaller-font {
+  font-size: 17px;
+  letter-spacing: -1px;
+}
+
 /* Scrollable Content */
 .content {
   text-align: center;
