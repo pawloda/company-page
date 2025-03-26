@@ -70,7 +70,7 @@
 
 .about-section .offer ul li {
   margin-left: 25%;
-  font-size: 24px;
+  font-size: 22px;
   padding: 5px;
 }
 
@@ -116,6 +116,9 @@
   text-transform: uppercase;
   font-size: 14px;
   color: rgb(133, 70, 15);
-  margin: 50px auto 50px auto;
+  margin: 70px auto 70px auto;
   max-width: 70%;
+  padding: 30px;
+  border: 2px solid rgba(184, 116, 6, 0.5);
+  border-radius: 12px;
 }

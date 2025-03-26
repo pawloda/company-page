@@ -1,6 +1,19 @@
 <div class="prices-section">
-  <h2 class="title">Zapytanie o cenę</h2>
-  <p class="description">
+  <h2
+    class="title"
+    data-en="Price Inquiry"
+    data-pl="Zapytanie o cenę"
+    data-de="Preisanfrage"
+  >
+    Zapytanie o cenę
+  </h2>
+
+  <p
+    class="description"
+    data-en="Fill out the form below to get a preliminary quote for AuraMetall fences and gates. If you have any questions, feel free to contact us."
+    data-pl="Wypełnij poniższy formularz, aby uzyskać wstępną wycenę ogrodzenia i bram AuraMetall. Jeśli masz pytania, skontaktuj się z nami."
+    data-de="Füllen Sie das untenstehende Formular aus, um ein vorläufiges Angebot für AuraMetall-Zäune und -Tore zu erhalten. Wenn Sie Fragen haben, kontaktieren Sie uns bitte."
+  >
     Wypełnij poniższy formularz, aby uzyskać wstępną wycenę ogrodzenia i bram
     AuraMetall. Jeśli masz pytania, skontaktuj się z nami.
   </p>
@@ -8,50 +21,195 @@
   <form class="inquiry-form">
     <img src="../img/prices/how-to-measure.png" alt="How to measure" />
     <fieldset>
-      <legend>Wymiary (w metrach)</legend>
-      <label for="dimension-a">Wymiar A (długość):</label>
+      <legend
+        data-en="Dimensions (in meters)"
+        data-pl="Wymiary (w metrach)"
+        data-de="Abmessungen (in Metern)"
+      >
+        Wymiary (w metrach)
+      </legend>
+
+      <label
+        for="dimension-a"
+        data-en="Dimension A (length)"
+        data-pl="Wymiar A (długość)"
+        data-de="Dimension A (Länge)"
+      >
+        Wymiar A (długość)
+      </label>
       <input type="text" id="dimension-a" name="dimension-a" required />
 
-      <label for="dimension-b">Wymiar B (długość):</label>
+      <label
+        for="dimension-b"
+        data-en="Dimension B (length)"
+        data-pl="Wymiar B (długość)"
+        data-de="Dimension B (Länge)"
+      >
+        Wymiar B (długość)
+      </label>
       <input type="text" id="dimension-b" name="dimension-b" required />
 
-      <label for="dimension-c">Wymiar C (długość):</label>
+      <label
+        for="dimension-c"
+        data-en="Dimension C (length)"
+        data-pl="Wymiar C (długość)"
+        data-de="Dimension C (Länge)"
+      >
+        Wymiar C (długość)
+      </label>
       <input type="text" id="dimension-c" name="dimension-c" required />
 
-      <label for="dimension-d">Wymiar D (długość):</label>
+      <label
+        for="dimension-d"
+        data-en="Dimension D (length)"
+        data-pl="Wymiar D (długość)"
+        data-de="Dimension D (Länge)"
+      >
+        Wymiar D (długość)
+      </label>
       <input type="text" id="dimension-d" name="dimension-d" required />
 
-      <label for="dimension-h">Wymiar H (wysokość):</label>
+      <label
+        for="dimension-h"
+        data-en="Dimension H (height)"
+        data-pl="Wymiar H (wysokość)"
+        data-de="Dimension H (Höhe)"
+      >
+        Wymiar H (wysokość)
+      </label>
       <input type="text" id="dimension-h" name="dimension-h" required />
     </fieldset>
 
     <fieldset>
-      <legend>Rodzaj Materiału</legend>
+      <legend
+        data-en="Material Type"
+        data-pl="Rodzaj Materiału"
+        data-de="Materialtyp"
+      >
+        Rodzaj Materiału
+      </legend>
       <select name="material" required>
-        <option value="" disabled selected>Wybierz materiał</option>
-        <option value="stal">Stal</option>
-        <option value="mata">Mata prętowana</option>
-        <option value="aluminium">Aluminium</option>
-        <option value="plastik">Plastik</option>
-        <option value="wpc">WPC</option>
-        <option value="beton">Beton</option>
-        <option value="nierdzewna">Stal nierdzewna</option>
+        <option
+          value=""
+          disabled
+          selected
+          data-en="Choose Material"
+          data-pl="Wybierz materiał"
+          data-de="Wählen Sie Material"
+        >
+          Wybierz materiał
+        </option>
+        <option value="stal" data-en="Steel" data-pl="Stal" data-de="Stahl">
+          Stal
+        </option>
+        <option
+          value="mata"
+          data-en="Wire Mesh"
+          data-pl="Mata prętowana"
+          data-de="Drahtgewebe"
+        >
+          Mata prętowana
+        </option>
+        <option
+          value="aluminium"
+          data-en="Aluminium"
+          data-pl="Aluminium"
+          data-de="Aluminium"
+        >
+          Aluminium
+        </option>
+        <option
+          value="plastik"
+          data-en="Plastic"
+          data-pl="Plastik"
+          data-de="Kunststoff"
+        >
+          Plastik
+        </option>
+        <option value="wpc" data-en="WPC" data-pl="WPC" data-de="WPC">
+          WPC
+        </option>
+        <option
+          value="beton"
+          data-en="Concrete"
+          data-pl="Beton"
+          data-de="Beton"
+        >
+          Beton
+        </option>
+        <option
+          value="nierdzewna"
+          data-en="Stainless Steel"
+          data-pl="Stal nierdzewna"
+          data-de="Edelstahl"
+        >
+          Stal nierdzewna
+        </option>
       </select>
     </fieldset>
 
     <fieldset>
-      <legend>Opcje dodatkowe</legend>
-      <label>Brama:</label>
+      <legend
+        data-en="Additional Options"
+        data-pl="Opcje dodatkowe"
+        data-de="Zusätzliche Optionen"
+      >
+        Opcje dodatkowe
+      </legend>
+
+      <label data-en="Gate:" data-pl="Brama:" data-de="Tor:"> Brama: </label>
       <select name="brama">
-        <option value="none">Brak bramy</option>
-        <option value="jednoskrzydlowa">Jednoskrzydłowa</option>
-        <option value="dwuskrzydlowa">Dwuskrzydłowa</option>
-        <option value="przesuwna">Przesuwna</option>
-        <option value="czesc-brama">⅔ Brama ⅓ Furtka</option>
+        <option
+          value="none"
+          data-en="No Gate"
+          data-pl="Brak bramy"
+          data-de="Kein Tor"
+        >
+          Brak bramy
+        </option>
+        <option
+          value="jednoskrzydlowa"
+          data-en="Single Wing"
+          data-pl="Jednoskrzydłowa"
+          data-de="Einflüglig"
+        >
+          Jednoskrzydłowa
+        </option>
+        <option
+          value="dwuskrzydlowa"
+          data-en="Double Wing"
+          data-pl="Dwuskrzydłowa"
+          data-de="Doppelflüglig"
+        >
+          Dwuskrzydłowa
+        </option>
+        <option
+          value="przesuwna"
+          data-en="Sliding"
+          data-pl="Przesuwna"
+          data-de="Schiebetor"
+        >
+          Przesuwna
+        </option>
+        <option
+          value="czesc-brama"
+          data-en="⅔ Gate ⅓ Pedestrian Door"
+          data-pl="⅔ Brama ⅓ Furtka"
+          data-de="⅔ Tor ⅓ Tür"
+        >
+          ⅔ Brama ⅓ Furtka
+        </option>
       </select>
 
       <div class="radio-group">
-        <label class="inline-el label-main">Furtka:</label>
+        <label
+          class="inline-el label-main"
+          data-en="Pedestrian Door:"
+          data-pl="Furtka:"
+          data-de="Fuhrungstür:"
+        >
+          Furtka:
+        </label>
         <input
           class="inline-el"
           type="radio"
@@ -59,7 +217,15 @@
           name="furtka"
           value="tak"
         />
-        <label class="inline-el" for="furtka-yes">Tak</label>
+        <label
+          class="inline-el"
+          for="furtka-yes"
+          data-en="Yes"
+          data-pl="Tak"
+          data-de="Ja"
+        >
+          Tak
+        </label>
         <input
           class="inline-el"
           type="radio"
@@ -68,11 +234,26 @@
           value="nie"
           checked
         />
-        <label class="inline-el" for="furtka-no">Nie</label>
+        <label
+          class="inline-el"
+          for="furtka-no"
+          data-en="No"
+          data-pl="Nie"
+          data-de="Nein"
+        >
+          Nie
+        </label>
       </div>
 
       <div class="radio-group">
-        <label class="inline-el label-main">Płot:</label>
+        <label
+          class="inline-el label-main"
+          data-en="Fence:"
+          data-pl="Płot:"
+          data-de="Zaun:"
+        >
+          Płot:
+        </label>
         <input
           class="inline-el"
           type="radio"
@@ -80,7 +261,15 @@
           name="plot"
           value="tak"
         />
-        <label class="inline-el" for="plot-yes">Tak</label>
+        <label
+          class="inline-el"
+          for="plot-yes"
+          data-en="Yes"
+          data-pl="Tak"
+          data-de="Ja"
+        >
+          Tak
+        </label>
         <input
           class="inline-el"
           type="radio"
@@ -89,11 +278,26 @@
           value="nie"
           checked
         />
-        <label class="inline-el" for="plot-no">Nie</label>
+        <label
+          class="inline-el"
+          for="plot-no"
+          data-en="No"
+          data-pl="Nie"
+          data-de="Nein"
+        >
+          Nie
+        </label>
       </div>
 
       <div class="radio-group">
-        <label class="inline-el label-main">Automat do bramy:</label>
+        <label
+          class="inline-el label-main"
+          data-en="Gate Automation:"
+          data-pl="Automat do bramy:"
+          data-de="Torautomatik:"
+        >
+          Automat do bramy:
+        </label>
         <input
           class="inline-el"
           type="radio"
@@ -101,7 +305,15 @@
           name="automat"
           value="tak"
         />
-        <label class="inline-el" for="automat-yes">Tak</label>
+        <label
+          class="inline-el"
+          for="automat-yes"
+          data-en="Yes"
+          data-pl="Tak"
+          data-de="Ja"
+        >
+          Tak
+        </label>
         <input
           class="inline-el"
           type="radio"
@@ -110,11 +322,26 @@
           value="nie"
           checked
         />
-        <label class="inline-el" for="automat-no">Nie</label>
+        <label
+          class="inline-el"
+          for="automat-no"
+          data-en="No"
+          data-pl="Nie"
+          data-de="Nein"
+        >
+          Nie
+        </label>
       </div>
 
       <div class="radio-group">
-        <label class="inline-el label-main">Słupy:</label>
+        <label
+          class="inline-el label-main"
+          data-en="Posts:"
+          data-pl="Słupy:"
+          data-de="Pfosten:"
+        >
+          Słupy:
+        </label>
         <input
           class="inline-el"
           type="radio"
@@ -122,7 +349,15 @@
           name="slupy"
           value="tak"
         />
-        <label class="inline-el" for="slupy-yes">Tak</label>
+        <label
+          class="inline-el"
+          for="slupy-yes"
+          data-en="Yes"
+          data-pl="Tak"
+          data-de="Ja"
+        >
+          Tak
+        </label>
         <input
           class="inline-el"
           type="radio"
@@ -131,45 +366,138 @@
           value="nie"
           checked
         />
-        <label class="inline-el" for="slupy-no">Nie</label>
+        <label
+          class="inline-el"
+          for="slupy-no"
+          data-en="No"
+          data-pl="Nie"
+          data-de="Nein"
+        >
+          Nie
+        </label>
       </div>
     </fieldset>
 
     <fieldset>
-      <legend>Dodatkowe informacje</legend>
-      <label for="images">Zdjęcia (opcjonalnie):</label>
+      <legend
+        data-en="Additional Information"
+        data-pl="Dodatkowe informacje"
+        data-de="Zusätzliche Informationen"
+      >
+        Dodatkowe informacje
+      </legend>
+
+      <label
+        for="images"
+        data-en="Photos (optional):"
+        data-pl="Zdjęcia (opcjonalnie):"
+        data-de="Fotos (optional):"
+      >
+        Zdjęcia (opcjonalnie):
+      </label>
       <input type="file" id="images" name="images" multiple />
 
-      <label for="message">Dodatkowe informacje:</label>
+      <label
+        for="message"
+        data-en="Additional Information:"
+        data-pl="Dodatkowe informacje:"
+        data-de="Zusätzliche Informationen:"
+      >
+        Dodatkowe informacje:
+      </label>
       <textarea id="message" name="message" rows="4"></textarea>
     </fieldset>
 
     <fieldset>
-      <legend>Dane kontaktowe</legend>
-      <label for="name">Imię i Nazwisko:</label>
+      <legend
+        data-en="Contact Information"
+        data-pl="Dane kontaktowe"
+        data-de="Kontaktinformationen"
+      >
+        Dane kontaktowe
+      </legend>
+
+      <label
+        for="name"
+        data-en="Full Name:"
+        data-pl="Imię i Nazwisko:"
+        data-de="Vollständiger Name:"
+      >
+        Imię i Nazwisko:
+      </label>
       <input type="text" id="name" name="name" required />
 
-      <label for="address">Ulica i numer domu:</label>
+      <label
+        for="address"
+        data-en="Street and House Number:"
+        data-pl="Ulica i numer domu:"
+        data-de="Straße und Hausnummer:"
+      >
+        Ulica i numer domu:
+      </label>
       <input type="text" id="address" name="address" />
 
-      <label for="zip">Kod pocztowy:</label>
+      <label
+        for="zip"
+        data-en="Postal Code:"
+        data-pl="Kod pocztowy:"
+        data-de="Postleitzahl:"
+      >
+        Kod pocztowy:
+      </label>
       <input type="text" id="zip" name="zip" />
 
-      <label for="city">Miasto:</label>
+      <label for="city" data-en="City:" data-pl="Miasto:" data-de="Stadt:">
+        Miasto:
+      </label>
       <input type="text" id="city" name="city" />
 
-      <label for="phone">Numer telefonu:</label>
+      <label
+        for="phone"
+        data-en="Phone Number:"
+        data-pl="Numer telefonu:"
+        data-de="Telefonnummer:"
+      >
+        Numer telefonu:
+      </label>
       <input type="tel" id="phone" name="phone" required />
 
-      <label for="email">Adres email:</label>
+      <label
+        for="email"
+        data-en="Email Address:"
+        data-pl="Adres email:"
+        data-de="E-Mail-Adresse:"
+      >
+        Adres email:
+      </label>
       <input type="email" id="email" name="email" required />
     </fieldset>
 
-    <button type="submit">Wyślij zapytanie</button>
+    <button
+      type="submit"
+      data-en="Submit Inquiry"
+      data-pl="Wyślij zapytanie"
+      data-de="Anfrage senden"
+    >
+      Wyślij zapytanie
+    </button>
   </form>
 
   <div id="popup" class="popup hidden">
-    <p>Email został wysłany! Dziękujemy za zapytanie.</p>
-    <button onclick="closePopup()">Zamknij</button>
+    <p
+      data-en="The email has been sent! Thank you for your inquiry."
+      data-pl="Email został wysłany! Dziękujemy za zapytanie."
+      data-de="Die E-Mail wurde gesendet! Vielen Dank für Ihre Anfrage."
+    >
+      Email został wysłany! Dziękujemy za zapytanie.
+    </p>
+    <button
+      onclick="closePopup()"
+      data-en="Close"
+      data-pl="Zamknij"
+      data-de="Schließen"
+    >
+      Zamknij
+    </button>
   </div>
 </div>
