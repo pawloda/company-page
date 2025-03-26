@@ -33,7 +33,7 @@
   margin-top: 60px;
   margin-right: 260px;
   line-height: 2;
-  color: #b25819;
+  color: #8d6605;
   font-weight: 600;
   font-style: italic;
 }
@@ -80,7 +80,7 @@
   margin-top: 20px;
   margin-bottom: 30px;
   margin-left: 31%;
-  color: #b25819;
+  color: #8d6605;
 }
 
 .about-section .offer ul li a {
@@ -90,14 +90,14 @@
 }
 
 .about-section .offer ul li a:hover {
-  color: #d2691e;
+  color: #b87306;
 }
 
 .about-section #fence-picture {
   width: 300px;
   border-radius: 50%;
   float: right;
-  border: 2px solid rgba(184, 115, 6);
+  border: 2px solid #8d6605;
   margin-right: 30px;
   margin-top: 38px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -115,7 +115,7 @@
 .about-section .about-footer {
   text-transform: uppercase;
   font-size: 14px;
-  color: rgb(133, 70, 15);
+  color: #8d6605;
   margin: 70px auto 70px auto;
   max-width: 70%;
   padding: 30px;

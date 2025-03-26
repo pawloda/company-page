@@ -13,7 +13,7 @@
   margin-top: 60px;
   font-size: 40px;
   font-weight: 600;
-  color: #b25819;
+  color: #8d6605;
   margin-bottom: 40px;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -27,8 +27,9 @@
 
 .offer-section .offer-category h3 {
   font-size: 28px;
+  padding: 4px;
   margin-bottom: 10px;
-  background: #b25819;
+  background: #8d6605;
   color: white;
 }
 

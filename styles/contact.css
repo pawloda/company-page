@@ -18,7 +18,7 @@
 /* Contact Information */
 .contact-section h2 {
   font-weight: 600;
-  color: #b25819;
+  color: #8d6605;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,7 +39,7 @@
 }
 
 .contact-section .contact-details a {
-  color: rgba(184, 115, 6);
+  color: #b87306;
   text-decoration: none;
   font-weight: bold;
 }
@@ -70,7 +70,7 @@
 }
 
 .contact-section .contact-form button {
-  background: #d2691e;
+  background: #b87306;
   color: white;
   padding: 12px;
   font-size: 18px;
@@ -81,7 +81,7 @@
 }
 
 .contact-section .contact-form button:hover {
-  background: #e47541;
+  background: #b87306;
   transform: scale(1.02);
   opacity: 0.9;
   transition: transform 0.3s ease, opacity 0.3s;

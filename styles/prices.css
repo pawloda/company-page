@@ -17,7 +17,7 @@
 
 .prices-section .title {
   margin-bottom: 15px;
-  color: #b25819;
+  color: #8d6605;
   font-weight: 600;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -39,7 +39,7 @@
 .prices-section .inquiry-form img {
   border-radius: 8px;
   margin: 20px 50px 10px 50px;
-  border: 2px solid rgba(184, 115, 6);
+  border: 2px solid #8d660582;
 }
 
 .prices-section .inquiry-form fieldset {
@@ -117,11 +117,11 @@
 }
 
 .prices-section .inquiry-form input[type="radio"] {
-  accent-color: #d2691e;
+  accent-color: #b87306;
 }
 
 .prices-section .inquiry-form button {
-  background: #d2691e;
+  background: #b87306;
   color: white;
   padding: 12px;
   font-size: 18px;
@@ -133,7 +133,7 @@
 }
 
 .prices-section .inquiry-form button:hover {
-  background: #e47541;
+  background: #b87306;
   transform: scale(1.02);
   opacity: 0.9;
   transition: transform 0.3s ease, opacity 0.3s;
