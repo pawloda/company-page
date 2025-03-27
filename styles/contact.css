@@ -62,7 +62,6 @@
 
 .contact-section .contact-form input,
 .contact-section .contact-form textarea {
-  width: 580px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -97,6 +96,11 @@
 }
 
 @media (max-width: 950px) {
+  .contact-section {
+    max-width: 400px;
+    margin: auto;
+  }
+
   .contact-section .contact-info {
     font-size: 15px;
     margin-bottom: 20px;
@@ -121,12 +125,5 @@
   .contact-section .contact-form button {
     padding: 12px;
     font-size: 15px;
-  }
-}
-
-@media (max-width: 650px) {
-  .contact-section .contact-form input,
-  .contact-section .contact-form textarea {
-    width: 500px;
   }
 }
