@@ -95,3 +95,38 @@
 .contact-section #message {
   resize: none;
 }
+
+@media (max-width: 950px) {
+  .contact-section .contact-info {
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 25px;
+  }
+
+  .contact-section .contact-details {
+    text-align: left;
+    font-size: 11px;
+    margin-bottom: 25px;
+  }
+
+  .contact-section .contact-form input,
+  .contact-section .contact-form textarea {
+    font-size: 13px;
+  }
+
+  .contact-section label {
+    font-size: 13px;
+  }
+
+  .contact-section .contact-form button {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .contact-section .contact-form input,
+  .contact-section .contact-form textarea {
+    width: 500px;
+  }
+}

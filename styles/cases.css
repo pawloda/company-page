@@ -25,3 +25,27 @@
   margin-right: auto;
   font-style: italic;
 }
+
+@media (max-width: 950px) {
+  .cases-section .cases-content {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+
+  .cases-section p {
+    margin-top: 50px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .cases-section .cases-content {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+  .cases-section p {
+    margin-top: 40px;
+    font-size: 12px;
+  }
+}
