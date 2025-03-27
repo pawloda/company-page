@@ -101,10 +101,18 @@
     margin: auto;
   }
 
+  .contact-section h2 {
+    font-size: 15px;
+  }
+
   .contact-section .contact-info {
+    font-size: 12px;
+  }
+
+  .contact-section {
     font-size: 15px;
     margin-bottom: 20px;
-    margin-top: 25px;
+    margin-top: 25px !important;
   }
 
   .contact-section .contact-details {

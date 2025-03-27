@@ -85,7 +85,7 @@
 @media (max-width: 950px) {
   /*Main page queries*/
   .nav-el a {
-    font-size: 10px !important;
+    font-size: 9px !important;
   }
 
   .main-nav ul {
@@ -116,7 +116,7 @@
 @media (max-width: 750px) {
   /*Main page queries*/
   .nav-el a {
-    font-size: 7px !important;
+    font-size: 6px !important;
   }
 
   .main-nav ul {

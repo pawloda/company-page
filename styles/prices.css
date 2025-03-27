@@ -165,3 +165,37 @@
   border-radius: 5px;
   text-align: center;
 }
+
+@media (max-width: 950px) {
+  .prices-section {
+    max-width: 400px !important;
+  }
+
+  .prices-section h2 {
+    font-size: 15px;
+  }
+
+  .prices-section .description {
+    text-align: left;
+    font-size: 11px;
+    margin-bottom: 25px;
+  }
+
+  .prices-section .inquiry-form input,
+  .prices-section .inquiry-form textarea {
+    font-size: 13px;
+  }
+
+  .prices-section label {
+    font-size: 13px;
+  }
+
+  .prices-section legend {
+    font-size: 15px !important;
+  }
+
+  .prices-section .inquiry-form button {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
