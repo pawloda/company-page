@@ -70,6 +70,10 @@ body {
   gap: 15px;
 }
 
+.top-right .bar-logo {
+  height: 22px;
+}
+
 .bar-logo {
   height: 18px;
 }

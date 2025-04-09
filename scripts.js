@@ -22,6 +22,7 @@ window.onload = function () {
     addEmailFunc();
     updateLanguage("DE");
     showPage("start");
+    setDate();
   }, 100);
 };
 
@@ -490,6 +491,12 @@ function updateLanguage(lang) {
   document.querySelectorAll("[data-de]").forEach((element) => {
     element.innerText = element.getAttribute(`data-${finalLang}`);
   });
+}
+
+function setDate() {
+  const yearElement = document.querySelector(".footer p");
+  const currentYear = new Date().getFullYear();
+  yearElement.innerHTML = yearElement.innerHTML.replace(/\d{4}/, currentYear);
 }
 
 // Event listeners for language options
