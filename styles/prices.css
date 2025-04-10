@@ -98,7 +98,7 @@
 }
 
 .prices-section .inquiry-form fieldset .radio-group .label-main {
-  width: 30%;
+  width: 40%;
 }
 
 .prices-section .radio-group input {
@@ -176,8 +176,7 @@
   }
 
   .prices-section .description {
-    text-align: left;
-    font-size: 11px;
+    font-size: 9px;
     margin-bottom: 25px;
   }
 

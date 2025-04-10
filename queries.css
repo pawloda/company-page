@@ -76,6 +76,10 @@
     height: 12px;
   }
 
+  .top-right .bar-logo {
+    height: 18px;
+  }
+
   .footer {
     padding: 15px;
     font-size: 12px;
