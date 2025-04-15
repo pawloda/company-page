@@ -107,6 +107,17 @@
   grid-column: span 2;
 }
 
+/* Hover effects */
+.offer-section .offer-link {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.offer-section .offer-link:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 @media (max-width: 1500px) {
   .offer-section .offer-gallery p {
     font-size: 13px;

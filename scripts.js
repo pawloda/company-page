@@ -4,6 +4,16 @@ const pages = [
   "start",
   "about",
   "offer",
+  "offer-fences-classic",
+  "offer-fences-modern",
+  "offer-fences-wpc",
+  "offer-fences-cnc",
+  "offer-fences-plastic",
+  "offer-fences-concrete",
+  "offer-balustrade",
+  "offer-gates",
+  "offer-mesh",
+  "offer-others",
   "templates",
   "photogallery",
   "cases",
@@ -20,6 +30,8 @@ window.onload = function () {
     addStartImgFunc();
     addCarouselFunc();
     addEmailFunc();
+    addOfferLinks();
+    addOfferLinksButtonFunc();
     updateLanguage("DE");
     showPage("start");
     setDate();
@@ -448,6 +460,31 @@ function addEmailFunc() {
     const popup = document.getElementById("popup");
     popup.classList.remove("shown");
   }
+}
+
+// Handle form submission
+function addOfferLinks() {
+  document.querySelectorAll(".offer-link").forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      setTimeout(() => {
+        hidePages();
+        showPage(this.id);
+      }, 100);
+    });
+  });
+}
+
+function addOfferLinksButtonFunc() {
+  document.querySelectorAll("#offer-link-button").forEach((button) => {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      setTimeout(() => {
+        hidePages();
+        showPage("offer");
+      }, 100);
+    });
+  });
 }
 
 // Toggle burger menu
