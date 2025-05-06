@@ -4,6 +4,10 @@
     font-size: 14px !important;
   }
 
+  .main-nav {
+    height: 64px;
+  }
+
   .main-nav ul {
     gap: 4px !important;
   }
@@ -24,6 +28,10 @@
     font-size: 12px !important;
   }
 
+  .main-nav {
+    height: 60px;
+  }
+
   .main-nav ul {
     gap: 2px !important;
   }
@@ -35,10 +43,6 @@
   .logo-scroll-down {
     height: 48px;
     transition: height 0.6s;
-  }
-
-  .main-nav ul li {
-    padding-top: 6px;
   }
 
   .burger-menu {
@@ -84,6 +88,11 @@
     padding: 15px;
     font-size: 12px;
   }
+
+  .current {
+    border-radius: 5px !important;
+    padding: 8px 10px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -92,14 +101,16 @@
     font-size: 9px !important;
   }
 
+  .main-nav {
+    height: 50px;
+  }
+
   .main-nav ul {
     gap: 2px !important;
-    height: 80%;
   }
 
   .main-nav ul li {
     padding: 6px;
-    padding-top: 4px;
   }
 
   .logo {
@@ -115,6 +126,11 @@
     padding: 12px;
     font-size: 10px;
   }
+
+  .current {
+    border-radius: 5px !important;
+    padding: 7px 9px !important;
+  }
 }
 
 @media (max-width: 750px) {
@@ -123,9 +139,8 @@
     padding: 10px 0;
   }
 
-  .nav-el {
-    padding-bottom: 8px !important;
-    height: 18px !important;
+  .main-nav {
+    height: 44px;
   }
 
   .nav-el a {
@@ -138,7 +153,6 @@
 
   .main-nav ul li {
     padding: 2px;
-    height: 70%;
   }
 
   .logo {
@@ -158,6 +172,11 @@
     padding: 10px;
     font-size: 8px;
   }
+
+  .current {
+    border-radius: 5px !important;
+    padding: 6px 7px !important;
+  }
 }
 
 @media (max-width: 650px) {
@@ -168,5 +187,10 @@
 
   .main-nav ul {
     gap: 4px !important;
+  }
+
+  .current {
+    border-radius: 5px !important;
+    padding: 5px 5px !important;
   }
 }
