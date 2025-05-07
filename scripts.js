@@ -1,5 +1,6 @@
 "use strict";
 
+let language = "DE";
 const pages = [
   "start",
   "about",
@@ -32,7 +33,7 @@ window.onload = function () {
     addEmailFunc();
     addOfferLinks();
     addOfferLinksButtonFunc();
-    updateLanguage("DE");
+    updateLanguage(language);
     showPage("start");
     setDate();
   }, 100);
@@ -392,73 +393,84 @@ function addCarouselFunc() {
 }
 
 function addEmailFunc() {
-  // Initialize EmailJS (You need to set up an EmailJS account and get your credentials)
-  emailjs.init("user_your_emailjs_user_id");
-
-  // Handle form submission
+  // Handle form prices submission
   document
     .querySelector(".inquiry-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-      // Prepare form data
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData.entries());
+      const form = e.target;
+      const formData = new FormData(form);
 
-      // Send email using EmailJS
-      emailjs
-        .sendForm("service_your_service_id", "template_your_template_id", this)
-        .then(
-          function (response) {
-            console.log("SUCCESS", response);
-            // Show the pop-up confirmation
-            showPopup();
-          },
-          function (error) {
-            console.error("FAILED", error);
-            // Optionally, handle the error case
-            alert("Coś poszło nie tak. Spróbuj ponownie.");
-          }
-        );
+      try {
+        const response = await fetch("./send-prices-email.php", {
+          method: "POST",
+          body: formData,
+        });
+
+        const result = await response.text();
+        alertSendingStatus(result);
+
+        form.reset();
+      } catch (error) {
+        console.error("Error:", error);
+        alertError();
+      }
     });
 
-  // Handle form submission
+  // Handle form contact submission
   document
     .querySelector(".contact-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-      // Prepare form data
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData.entries());
+      const form = e.target;
+      const formData = new FormData(form);
 
-      // Send email using EmailJS
-      emailjs
-        .sendForm("service_your_service_id", "template_your_template_id", this)
-        .then(
-          function (response) {
-            console.log("SUCCESS", response);
-            // Show the pop-up confirmation
-            showPopup();
-          },
-          function (error) {
-            console.error("FAILED", error);
-            // Optionally, handle the error case
-            alert("Coś poszło nie tak. Spróbuj ponownie.");
-          }
-        );
+      try {
+        const response = await fetch("./send-contact-email.php", {
+          method: "POST",
+          body: formData,
+        });
+
+        const result = await response.text();
+        alertSendingStatus(result);
+
+        form.reset();
+      } catch (error) {
+        console.error("Error:", error);
+        alertError();
+      }
     });
 
-  // Show the pop-up
-  function showPopup() {
-    const popup = document.getElementById("popup");
-    popup.classList.add("shown");
+  function alertSendingStatus(result) {
+    if (result.includes("success")) {
+      if (language === "PL") {
+        alert("Wiadomość została wysłana!");
+      } else if (language === "EN") {
+        alert("Message has been sent!");
+      } else {
+        alert("Nachricht wurde gesendet!");
+      }
+    } else {
+      if (language === "PL") {
+        alert("Błąd podczas wysyłania wiadomości.");
+      } else if (language === "EN") {
+        alert("Error sending message.");
+      } else {
+        alert("Fehler beim Senden der Nachricht.");
+      }
+    }
   }
 
-  // Close the pop-up
-  function closePopup() {
-    const popup = document.getElementById("popup");
-    popup.classList.remove("shown");
+  function alertError() {
+    if (language === "PL") {
+      alert("Błąd serwera! Wiadomość nie została wysłana.");
+    } else if (language === "EN") {
+      alert("Server error! Message could not be sent.");
+    } else {
+      alert("Serverfehler! Nachricht konnte nicht gesendet werden.");
+    }
   }
 }
 
@@ -522,8 +534,8 @@ document.addEventListener("click", function (event) {
 // Function to update the page text
 function updateLanguage(lang) {
   const finalLang = lang === "PL" ? "pl" : lang === "DE" ? "de" : "en"; // Set language
-
-  updateFontSizeInBar(finalLang.toUpperCase());
+  language = finalLang.toUpperCase();
+  updateFontSizeInBar(language);
   //     // Apply translations
   document.querySelectorAll("[data-de]").forEach((element) => {
     element.innerText = element.getAttribute(`data-${finalLang}`);

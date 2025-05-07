@@ -325,36 +325,3 @@
     left: 94%;
   }
 }
-
-@media (max-width: 340px) {
-  /*Main page queries*/
-  .burger-menu {
-    left: 84%;
-  }
-
-  .top-right {
-    left: 100%;
-  }
-}
-
-@media (max-width: 320px) {
-  /*Main page queries*/
-  .burger-menu {
-    left: 90%;
-  }
-
-  .top-right {
-    left: 110%;
-  }
-}
-
-@media (max-width: 300px) {
-  /*Main page queries*/
-  .burger-menu {
-    left: 96%;
-  }
-
-  .top-right {
-    left: 120%;
-  }
-}
