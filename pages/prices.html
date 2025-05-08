@@ -19,7 +19,7 @@
     AuraMetall. Jeśli masz pytania, skontaktuj się z nami.
   </p>
 
-  <form class="inquiry-form">
+  <form class="inquiry-form" enctype="multipart/form-data" method="POST">
     <img src="../img/prices/how-to-measure.png" alt="How to measure" />
     <fieldset>
       <legend
@@ -123,7 +123,7 @@
           value="plastik"
           data-en="Plastic"
           data-pl="Plastik"
-          data-de="Kunststoff"
+          data-de="Kunststoffpaneelen"
         >
           Plastik
         </option>
@@ -146,19 +146,20 @@
         >
           Stal nierdzewna
         </option>
+        <option
+          value="panele"
+          data-en="Wire mesh panels"
+          data-pl="Panelowe"
+          data-de="Doppelstabmatten "
+        >
+          Panele
+        </option>
       </select>
     </fieldset>
 
     <fieldset>
-      <legend
-        data-en="Additional Options"
-        data-pl="Opcje dodatkowe"
-        data-de="Zusätzliche Optionen"
-      >
-        Opcje dodatkowe
-      </legend>
+      <legend data-en="Gate:" data-pl="Brama:" data-de="Tor:">Brama:</legend>
 
-      <label data-en="Gate:" data-pl="Brama:" data-de="Tor:"> Brama: </label>
       <select name="brama">
         <option
           value="none"
@@ -180,7 +181,7 @@
           value="dwuskrzydlowa"
           data-en="Double Wing"
           data-pl="Dwuskrzydłowa"
-          data-de="Doppelflüglig"
+          data-de="Zweiflüglig"
         >
           Dwuskrzydłowa
         </option>
@@ -188,7 +189,7 @@
           value="przesuwna"
           data-en="Sliding"
           data-pl="Przesuwna"
-          data-de="Schiebetor"
+          data-de="Schiebetor freitragend"
         >
           Przesuwna
         </option>
@@ -196,7 +197,7 @@
           value="czesc-brama"
           data-en="⅔ Gate ⅓ Pedestrian Door"
           data-pl="⅔ Brama ⅓ Furtka"
-          data-de="⅔ Tor ⅓ Tür"
+          data-de="⅔ Tor ⅓ Pforte"
         >
           ⅔ Brama ⅓ Furtka
         </option>
@@ -207,7 +208,7 @@
           class="inline-el label-main"
           data-en="Pedestrian Door:"
           data-pl="Furtka:"
-          data-de="Fuhrungstür:"
+          data-de="Pforte:"
         >
           Furtka:
         </label>
@@ -380,7 +381,7 @@
         for="name"
         data-en="Full Name:"
         data-pl="Imię i Nazwisko:"
-        data-de="Vollständiger Name:"
+        data-de="Vor- und Nachname:"
       >
         Imię i Nazwisko:
       </label>

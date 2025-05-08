@@ -4,7 +4,7 @@
     $phone = strip_tags($_POST["phone"]);
     $message = strip_tags($_POST["message"]);
 
-    $to = "aurametallpl@gmail.com";
+    $to = "info@aurametall.de";
     $subject = "Nowa wiadomość z formularza kontaktowego";
     $body = "Imię i nazwisko: $name\nEmail: $email\nTelefon: $phone\n\nWiadomość:\n$message";
     $headers = "From: $email";

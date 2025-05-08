@@ -1,5 +1,5 @@
 <?php
-  $to = "aurametallpl@gmail.com";
+  $to = "info@aurametall.de";
   $subject = "Zapytanie o wycenę - AuraMetall";
 
   $headers = "From: " . $_POST['email'] . "\r\n";
@@ -24,6 +24,19 @@
   $body .= "Furtka: " . $_POST['furtka'] . "\n";
   $body .= "Płot: " . $_POST['plot'] . "\n";
   $body .= "Automat: " . $_POST['automat'] . "\n\n";
+
+  // Attach image if uploaded
+  if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
+    $fileTmpPath = $_FILES['image']['tmp_name'];
+    $fileName = basename($_FILES['image']['name']);
+    $fileType = mime_content_type($fileTmpPath);
+    $fileData = chunk_split(base64_encode(file_get_contents($fileTmpPath)));
+
+    $body .= "Content-Type: $fileType; name=\"$fileName\"\r\n";
+    $body .= "Content-Transfer-Encoding: base64\r\n";
+    $body .= "Content-Disposition: attachment; filename=\"$fileName\"\r\n\r\n";
+    $body .= $fileData . "\r\n";
+  }
 
   $body .= "Dodatkowe informacje:\n" . $_POST['message'] . "\n";
 
