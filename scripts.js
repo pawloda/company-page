@@ -74,6 +74,8 @@ document.querySelectorAll(".nav-el a").forEach((link) => {
 function fetchPages(pages) {
   pages.forEach((page) => {
     addCss(page);
+  });
+  pages.forEach((page) => {
     fetchPage(page);
   });
   scrollToTop();
