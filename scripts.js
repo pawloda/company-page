@@ -2,7 +2,6 @@
 
 let language = "DE";
 const pages = [
-  "start",
   "about",
   "offer",
   "offer-fences-classic",
@@ -25,8 +24,11 @@ const pages = [
 ];
 
 window.onload = function () {
+  fetchPages(["start"]);
   fetchPages(pages);
   setTimeout(() => {
+    addStartButtonFunc();
+    addStartImgFunc();
     addStartButtonFunc();
     addStartImgFunc();
     addCarouselFunc();
@@ -36,7 +38,7 @@ window.onload = function () {
     updateLanguage(language);
     showPage("start");
     setDate();
-  }, 100);
+  }, 300);
 };
 
 window.addEventListener("scroll", function () {
@@ -108,6 +110,7 @@ function scrollToTop() {
 }
 
 function hidePages() {
+  hidePage(["start"]);
   pages.forEach((page) => hidePage(page));
 }
 
