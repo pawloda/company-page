@@ -26,6 +26,7 @@ const pages = [
 
 window.onload = function () {
   fetchPages(pages);
+  hidePages();
   setTimeout(() => {
     addStartButtonFunc();
     addStartImgFunc();
