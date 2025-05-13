@@ -2,6 +2,7 @@
 
 let language = "DE";
 const pages = [
+  "start",
   "about",
   "offer",
   "offer-fences-classic",
@@ -24,7 +25,6 @@ const pages = [
 ];
 
 window.onload = function () {
-  fetchPages(["start"]);
   fetchPages(pages);
   setTimeout(() => {
     addStartButtonFunc();
@@ -38,7 +38,7 @@ window.onload = function () {
     updateLanguage(language);
     showPage("start");
     setDate();
-  }, 300);
+  }, 800);
 };
 
 window.addEventListener("scroll", function () {
@@ -110,7 +110,6 @@ function scrollToTop() {
 }
 
 function hidePages() {
-  hidePage(["start"]);
   pages.forEach((page) => hidePage(page));
 }
 
