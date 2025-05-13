@@ -318,10 +318,10 @@
 @media (max-width: 380px) {
   /*Main page queries*/
   .burger-menu {
-    left: 74%;
+    left: 64%;
   }
 
   .top-right {
-    left: 94%;
+    left: 82%;
   }
 }

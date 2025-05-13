@@ -194,7 +194,7 @@ function addStartImgFunc() {
         hidePages();
         showPage("offer");
         window.scrollTo({
-          top: 1630,
+          top: 1200,
           behavior: "smooth",
         });
       }, 100);
@@ -232,7 +232,7 @@ function addStartImgFunc() {
         hidePages();
         showPage("offer");
         window.scrollTo({
-          top: 1630,
+          top: 1200,
           behavior: "smooth",
         });
       }, 100);
