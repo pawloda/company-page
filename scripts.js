@@ -11,6 +11,8 @@ const pages = [
   "offer-fences-cnc",
   "offer-fences-plastic",
   "offer-fences-concrete",
+  "offer-carports",
+  "offer-roofings",
   "offer-balustrade",
   "offer-gates",
   "offer-mesh",
@@ -198,6 +200,44 @@ function addStartImgFunc() {
         hidePages();
         showPage("offer");
         window.scrollTo({
+          top: 1500,
+          behavior: "smooth",
+        });
+      }, 100);
+
+      document
+        .querySelectorAll(".nav-el")
+        .forEach((item) => item.classList.remove("current"));
+      document.querySelector("#offer").classList.add("current");
+    })
+  );
+
+  document.querySelectorAll(".offer-carports").forEach((el) =>
+    el.addEventListener("click", function (event) {
+      event.preventDefault();
+      setTimeout(() => {
+        hidePages();
+        showPage("offer");
+        window.scrollTo({
+          top: 1200,
+          behavior: "smooth",
+        });
+      }, 100);
+
+      document
+        .querySelectorAll(".nav-el")
+        .forEach((item) => item.classList.remove("current"));
+      document.querySelector("#offer").classList.add("current");
+    })
+  );
+
+  document.querySelectorAll(".offer-roofings").forEach((el) =>
+    el.addEventListener("click", function (event) {
+      event.preventDefault();
+      setTimeout(() => {
+        hidePages();
+        showPage("offer");
+        window.scrollTo({
           top: 1200,
           behavior: "smooth",
         });
@@ -236,7 +276,7 @@ function addStartImgFunc() {
         hidePages();
         showPage("offer");
         window.scrollTo({
-          top: 1200,
+          top: 1500,
           behavior: "smooth",
         });
       }, 100);
